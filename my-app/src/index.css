@@ -1,1 +1,109 @@
+/* =============================== CREATE COLOR PALETTE VARIABLES =============================== */
 
+:root {
+    /* Color Theme Swatches in Hex */
+    --gravity-1-hex: #401B59;
+    --gravity-2-hex: #532A8C;
+    --gravity-3-hex: #683FBF;
+    --gravity-4-hex: #6C57F2;
+    --gravity-5-hex: #7E9BF2;
+
+    /* Color Theme Swatches in RGBA */
+    --gravity-1-rgba: rgba(64, 26, 89, 1);
+    --gravity-2-rgba: rgba(82, 42, 140, 1);
+    --gravity-3-rgba: rgba(103, 63, 191, 1);
+    --gravity-4-rgba: rgba(107, 87, 242, 1);
+    --gravity-5-rgba: rgba(125, 155, 242, 1);
+
+    /* Color Theme Swatches in HSLA */
+    --gravity-1-hsla: hsla(275, 53, 22, 1);
+    --gravity-2-hsla: hsla(264, 53, 35, 1);
+    --gravity-3-hsla: hsla(258, 50, 49, 1);
+    --gravity-5-hsla: hsla(225, 82, 72, 1);
+    --gravity-4-hsla: hsla(247, 85, 64, 1);
+
+}
+
+
+/* =============================== NORMALIZE  =============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* =============================== ELEMENTS  =============================== */
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    /* min-height: 100vh;
+    width: 100vw; */
+    background-color: red;
+}
+
+button {
+    background-color: var(--gravity-1-hex);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+h1 {}
+
+/* =============================== HEADER SECTION  =============================== */
+
+.app--container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "content content content"
+        "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.header--container {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: var(--gravity-1-hex);
+    color: white;
+    padding: 20px;
+}
+
+
+.footer--container {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: var(--gravity-1-hex);
+    color: white;
+    padding: 20px;
+}
+
+.main--container {
+    display: flex;
+    flex-direction: column;
+    grid-template-areas: "left middle right";
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: white;
+    padding: 20px;
+}
+
+/* =============================== LEFT COLUMN  =============================== */
+
+
+
+/* =============================== MIDDLE COLUMN  =============================== */
+
+
+
+/* =============================== RIGHT COLUMN  =============================== */
