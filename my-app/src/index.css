@@ -38,9 +38,6 @@
 
 body {
     font-family: 'Josefin Sans', sans-serif;
-    /* min-height: 100vh;
-    width: 100vw; */
-    background-color: red;
 }
 
 button {
@@ -54,7 +51,15 @@ button {
     cursor: pointer;
 }
 
-h1 {}
+h1 {
+    text-transform: uppercase;
+    align-self: center;
+}
+
+img {
+    max-width: 100%;
+    height: fit-content;
+}
 
 /* =============================== HEADER SECTION  =============================== */
 
@@ -79,6 +84,30 @@ h1 {}
     padding: 20px;
 }
 
+.button--container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: left;
+    align-items: center;
+    gap: 40px;
+}
+
+.left-button {
+    width: 33%;
+    max-width: 100px;
+}
+
+.main--display {
+    height: 88%;
+    margin: 40px 0px 0px 0px;
+    padding: 8%;
+}
+
+.right-button {
+    width: 33%;
+    max-width: 100px;
+}
 
 .footer--container {
     grid-column-start: 1;
@@ -97,6 +126,7 @@ h1 {}
     background-color: white;
     padding: 20px;
 }
+
 
 /* =============================== LEFT COLUMN  =============================== */
 
