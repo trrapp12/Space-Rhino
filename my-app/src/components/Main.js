@@ -50,7 +50,6 @@ export default function Main() {
 
   return (
     <div className="main--container">
-      <h1>Nasa Photos App</h1>
       {displayElements}
       <div className="button--container">
         <button 

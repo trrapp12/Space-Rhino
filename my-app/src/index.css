@@ -7,6 +7,7 @@
     --gravity-3-hex: #683FBF;
     --gravity-4-hex: #6C57F2;
     --gravity-5-hex: #7E9BF2;
+    --gravity-black-hex: #010102;
 
     /* Color Theme Swatches in RGBA */
     --gravity-1-rgba: rgba(64, 26, 89, 1);
@@ -35,6 +36,34 @@
 }
 
 /* =============================== ELEMENTS  =============================== */
+
+a:link {
+    color: var(--gravity-5-hex);
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:visited {
+    color: #c25a5a;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a:active {
+    color: var(--gravity-3-hex);
+    background-color: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 body {
     font-family: 'Josefin Sans', sans-serif;
@@ -70,18 +99,9 @@ img {
         "content content content"
         "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-rows: 100px 8fr 75px;
     min-width: 100vw;
     min-height: 100vh;
-}
-
-.header--container {
-    display: grid;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    background-color: var(--gravity-1-hex);
-    color: white;
-    padding: 20px;
 }
 
 .button--container {
@@ -91,6 +111,22 @@ img {
     justify-content: left;
     align-items: center;
     gap: 40px;
+}
+
+.header--container {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: var(--gravity-black-hex);
+    color: white;
+    padding: 20px;
+    background: rgb(64, 27, 89);
+    background-image: url(http://localhost:3000/static/media/DALL_E_Rhino.5345abe338fc405b3bd5.png), linear-gradient(90deg, rgba(64, 27, 89, 1) 0%, rgba(83, 42, 140, 1) 15%, rgba(0, 0, 0, 1) 100%);
+    background-repeat: no-repeat, repeat;
+    background-size: auto 100%;
+    background-position: center right;
+    opacity: 1;
+    background-blend-mode: lighten;
 }
 
 .left-button {
@@ -109,6 +145,8 @@ img {
     max-width: 100px;
 }
 
+/* =============================== FOOTER SECTION  =============================== */
+
 .footer--container {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -117,23 +155,34 @@ img {
     padding: 20px;
 }
 
+.footer--text {
+    margin: 0px 0px 10px 0px;
+}
+
+/* =============================== MAIN SECTION  =============================== */
+
 .main--container {
     display: flex;
     flex-direction: column;
     grid-template-areas: "left middle right";
     grid-column-start: 1;
     grid-column-end: 4;
-    background-color: white;
+    background-color: var(--gravity-black-hex);
     padding: 20px;
+
 }
 
+/* =============================== MISC SECTION  =============================== */
 
-/* =============================== LEFT COLUMN  =============================== */
+.blue {
+    color: var(--gravity-5-hex);
+}
 
+.brown-highlight {
+    opacity: 1;
+    color: #BF9C26;
+}
 
-
-/* =============================== MIDDLE COLUMN  =============================== */
-
-
-
-/* =============================== RIGHT COLUMN  =============================== */
+.lower-opacity {
+    opacity: 0.5;
+}
