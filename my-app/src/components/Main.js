@@ -43,12 +43,13 @@ export default function Main() {
   }
 
   function subtractNum() {
-    setNumData(prevNum => prevNum -1)
+    setNumData(prevNum => prevNum - 1)
   }
 
 
 
   return (
+    <React.StrictMode>
     <div className="main--container">
       {displayElements}
       <div className="button--container">
@@ -62,5 +63,6 @@ export default function Main() {
         onClick={addNum}> + </button>
       </div>
     </div>
+    </React.StrictMode>
   );
 }
