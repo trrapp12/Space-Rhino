@@ -19,9 +19,9 @@
     --gravity-4-rgba-opacity: rgba(107, 87, 242, .8);
     --gravity-5-rgba-opacity: rgba(125, 155, 242, .8);
     --gravity-1-rgba-opacity: rgba(64, 26, 89, .8);
-
-    /* Color Theme Swatches in HSLA */
-    --gravity-1-hsla: hsla(275, 53, 22, 1);
+    --black-opacity: rgba(1, 1, 2, .8)
+        /* Color Theme Swatches in HSLA */
+        --gravity-1-hsla: hsla(275, 53, 22, 1);
     --gravity-2-hsla: hsla(264, 53, 35, 1);
     --gravity-3-hsla: hsla(258, 50, 49, 1);
     --gravity-5-hsla: hsla(225, 82, 72, 1);
@@ -93,11 +93,14 @@ h1 {
 img {
     max-width: 100%;
     height: fit-content;
+    margin-top: 20px;
 }
 
 p {
     color: white;
     line-height: 1.5rem;
+    margin-top: 20px;
+    opacity: .7;
 }
 
 h3 {
@@ -109,12 +112,13 @@ h3 {
 
 .app--container {
     display: grid;
-    grid-template-areas:
-        "header header header"
+    grid-template-areas: "header header header"
         "content content content"
         "footer footer footer";
     min-width: 100vw;
     min-height: 100vh;
+    grid-template-rows: 20vh 1fr;
+    position: relative;
 }
 
 .button--container {
@@ -134,13 +138,13 @@ h3 {
     color: white;
     padding: 20px;
     background: rgb(64, 27, 89);
-    background-image: url(http://localhost:3000/static/media/DALL_E_Rhino.5345abe338fc405b3bd5.png), linear-gradient(90deg, rgba(64, 27, 89, 1) 0%, rgba(83, 42, 140, 1) 15%, rgba(0, 0, 0, 1) 100%);
+    background-image: url(./components/images/DALL_E_Rhino.png), linear-gradient(90deg, rgba(64, 27, 89, 1) 0%, rgba(83, 42, 140, 1) 15%, rgba(0, 0, 0, 1) 100%);
     background-repeat: no-repeat, repeat;
     background-size: auto 100%;
     background-position: center right;
     opacity: 1;
     background-blend-mode: lighten;
-    position: fixed;
+    position: sticky;
     z-index: 10;
     width: 100%;
     left: 0;
@@ -157,8 +161,12 @@ h3 {
     padding: 8%;
     z-index: 10;
     background-color: rgba(255, 255, 255, .05);
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
 }
 
 .right-button {
@@ -179,6 +187,7 @@ h3 {
     bottom: 0;
     left: 0;
     width: 100%;
+    display: none;
 }
 
 .footer--text {
@@ -191,13 +200,13 @@ h3 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(http://localhost:3000/static/media/constellations.15dbe52d7435676f1526.jpeg);
+    background-image: url(./components/images/constellations.jpeg);
     background-color: rgba(255, 255, 255, .15);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: masonry;
+    position: relative;
+    padding: 20px 0px;
 }
 
 .main--container::after {
@@ -207,7 +216,7 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--gravity-3-rgba-opacity);
+    background: var(--black-opacity);
 }
 
 /* =============================== MISC SECTION  =============================== */
