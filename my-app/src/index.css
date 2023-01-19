@@ -17,7 +17,7 @@
     --gravity-5-rgba: rgba(125, 155, 242, 1);
     --gravity-3-rgba-opacity: rgba(103, 63, 191, .8);
     --gravity-4-rgba-opacity: rgba(107, 87, 242, .8);
-    --gravity-5-rgba-opacity: rgba(125, 155, 242, .8);
+    --gravity-5-rgba-opacity: rgba(125, 155, 242, .3);
     --gravity-1-rgba-opacity: rgba(64, 26, 89, .8);
     --black-opacity: rgba(1, 1, 2, .8)
         /* Color Theme Swatches in HSLA */
@@ -120,14 +120,15 @@ p {
 
 .button--container {
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    flex-direction: column;
+    width: 150px;
     justify-content: left;
-    align-items: center;
+    align-items: unset;
     gap: 40px;
     position: fixed;
-    top: 77%;
-    left: 0px;
+    top: 26%;
+    left: 20px;
+    width: 90px;
     z-index: 100;
 }
 
@@ -136,6 +137,7 @@ p {
     font-size: 2rem;
     padding: 0px;
     line-height: 10px;
+    align-self: center;
 }
 
 .header--container {
@@ -160,8 +162,29 @@ p {
 }
 
 .left-button {
-    width: 33%;
-    max-width: 100px;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 51.96px solid var(--gravity-5-rgba-opacity);
+    padding: 0px;
+    background-color: transparent;
+    font-size: 2rem;
+    line-height: 62px;
+    text-indent: -6px;
+}
+
+.left-button::after {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 51.96px solid var(--gravity-5-rgba-opacity);
+    padding: 0px;
+    background-color: transparent;
+    font-size: 2rem;
+    line-height: 62px;
+    text-indent: -6px;
 }
 
 .main--display {
@@ -176,8 +199,16 @@ p {
 }
 
 .right-button {
-    width: 33%;
-    max-width: 100px;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 51.96px solid var(--gravity-5-rgba-opacity);
+    padding: 0px;
+    background-color: transparent;
+    font-size: 2rem;
+    line-height: 62px;
+    text-indent: -6px;
 }
 
 /* =============================== FOOTER SECTION  =============================== */
@@ -248,4 +279,33 @@ p {
 
 .lower-opacity {
     opacity: 0.5;
+}
+
+.btn {
+
+    font-family: Roboto, sans-serif;
+    font-weight: 0;
+    font-size: 14px;
+    color: #fff;
+    background: linear-gradient(178deg, #0000000f 13%, #c500cc 86%);
+    padding: 10px 29px;
+    border: solid #f2b705 2px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 30px 30px 6px 6px;
+    transition: 1322ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+
+    transition: 1322ms;
+    padding: 10px 26px;
+    transform: translateY(-31px);
+    background: linear-gradient(178deg, #0000000f 13%, #c500cc 86%);
+    color: #f2b705;
+    border: solid 2px #dea866;
 }

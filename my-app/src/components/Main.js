@@ -29,7 +29,7 @@ export default function Main() {
 
   React.useEffect(function() {
     fetch(
-      `https://api.nasa.gov/planetary/apod?api_key=${api_key}&count=${numData}`
+      `https://api.nasa.gov/planetary/apod?api_key=${api_key}&count=${1}`
     )
     .then(res => res.json())
     .then(data => setNasaData(prevData => {
