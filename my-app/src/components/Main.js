@@ -5,9 +5,9 @@ export default function Main() {
 
   const [nasaData, setNasaData] = React.useState([]);
 
-  const [numData, setNumData] = React.useState(1)
+  const [numData, setNumData] = React.useState(1);
 
-  console.log(nasaData)
+  console.log(nasaData); 
   
   const api_key = "gQBHOwp1QgftmdeZ3bO3KTnskprBBUwud1vmWgRz";
 
