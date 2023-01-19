@@ -125,6 +125,10 @@ p {
     justify-content: left;
     align-items: center;
     gap: 40px;
+    position: fixed;
+    top: 77%;
+    left: 0px;
+    z-index: 100;
 }
 
 .display {
