@@ -53,14 +53,9 @@ export default function Main() {
     <div className="main--container">
       {displayElements}
       <div className="button--container">
-        <button 
-          className="left-button"
-          onClick={subtractNum}
-          > - </button>
+        <button className="left-button" onClick={subtractNum}> - </button>
           <div className="display">{numData}</div>
-        <button
-        className="right-button"
-        onClick={addNum}> + </button>
+        <button className="right-button" onClick={addNum}> + </button>
       </div>
     </div>
     </React.StrictMode>

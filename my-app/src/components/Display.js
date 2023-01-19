@@ -4,10 +4,12 @@ export default function Display(props) {
     
     return (
         <div className="main--display">
-            <h3>{props.title}</h3>
+            <h3>{props.title}  Star Date {props.date}</h3>
             <img src={props.url}></img>
-            <p>{props.explanation}</p>
-            <p className="main--ending-paragraph">Star Date {props.date}</p>
+            <div className="main--display-p-content-container">
+                <p className="main--display-p-content">{props.explanation}</p>
+            </div>
+
         </div>
     )
 }
