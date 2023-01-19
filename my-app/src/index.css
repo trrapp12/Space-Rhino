@@ -101,6 +101,10 @@ h3 {
     text-transform: uppercase;
 }
 
+p {
+    color: white;
+}
+
 /* =============================== HEADER SECTION  =============================== */
 
 .app--container {
@@ -121,6 +125,13 @@ h3 {
     justify-content: left;
     align-items: center;
     gap: 40px;
+}
+
+.display {
+    color: white;
+    font-size: 2rem;
+    padding: 0px;
+    line-height: 10px;
 }
 
 .header--container {
