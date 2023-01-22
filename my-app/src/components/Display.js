@@ -4,7 +4,8 @@ export default function Display(props) {
     
     return (
         <div className="main--display">
-            <h3>{props.title}  Star Date {props.date}</h3>
+            <h3>{props.title}</h3>
+            <p><span className="brown-highlight">Star Date {props.date}</span></p>  
             <img src={props.url}></img>
             <div className="main--display-p-content-container">
                 <p className="main--display-p-content">{props.explanation}</p>

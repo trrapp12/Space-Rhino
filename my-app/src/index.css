@@ -93,12 +93,13 @@ h1 {
 img {
     max-width: 100%;
     height: fit-content;
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
 h3 {
     color: white;
     text-transform: uppercase;
+    line-height: 200%;
 }
 
 p {
@@ -196,6 +197,7 @@ p {
     padding: 35px;
     overflow: hidden;
     text-overflow: ellipsis;
+    box-shadow: rgb(188 144 239 / 16%) 0px 30px 60px -12px inset, rgb(196 144 144 / 30%) 0px 18px 36px -18px inset;
 }
 
 .right-button {
@@ -251,7 +253,7 @@ p {
 .main--display-p-content {
     color: white;
     line-height: 1.5rem;
-    margin-top: 20px;
+    margin-top: 2rem;
     opacity: .7;
     width: 300px;
     display: -webkit-box;
@@ -275,6 +277,7 @@ p {
 .brown-highlight {
     opacity: 1;
     color: #BF9C26;
+    text-transform: capitalize;
 }
 
 .lower-opacity {
