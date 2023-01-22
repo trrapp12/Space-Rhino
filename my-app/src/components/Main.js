@@ -78,7 +78,7 @@ export default function Main() {
         up: false
       }))
     }
-    console.log('subtqact fired')
+    console.log('subtact fired')
   }
  
   console.log(numData.num)
