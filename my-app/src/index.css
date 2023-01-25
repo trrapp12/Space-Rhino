@@ -129,7 +129,7 @@ p {
     position: fixed;
     top: 26%;
     left: 20px;
-    width: 90px;
+    width: 61px;
     z-index: 100;
 }
 
@@ -156,7 +156,7 @@ p {
     opacity: 1;
     background-blend-mode: lighten;
     position: sticky;
-    z-index: 10;
+    z-index: 30;
     width: 100%;
     left: 0;
     top: 0;
@@ -167,7 +167,7 @@ p {
     height: 0;
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
-    border-bottom: 51.96px solid var(--gravity-5-rgba-opacity);
+    border-bottom: 51.96px solid var(--gravity-2-rgba);
     padding: 0px;
     background-color: transparent;
     font-size: 2rem;
@@ -180,7 +180,7 @@ p {
     height: 0;
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
-    border-bottom: 51.96px solid var(--gravity-5-rgba-opacity);
+    border-bottom: 51.96px solid var(--gravity-2-rgba);
     padding: 0px;
     background-color: transparent;
     font-size: 2rem;
@@ -205,12 +205,19 @@ p {
     height: 0;
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
-    border-top: 51.96px solid var(--gravity-5-rgba-opacity);
+    border-top: 51.96px solid var(--gravity-2-rgba);
     padding: 0px;
     background-color: transparent;
     font-size: 2rem;
     line-height: 62px;
     text-indent: -6px;
+}
+
+.right-button::after {
+    content: " + ";
+    top: 129px;
+    left: 26px;
+    position: absolute;
 }
 
 /* =============================== FOOTER SECTION  =============================== */
