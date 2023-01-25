@@ -5,90 +5,94 @@ export default function Main() {
 
   const [nasaData, setNasaData] = React.useState([]);
 
-  const [numData, setNumData] = React.useState(
-    {up: true, 
-    num: 1});
+  const [numData, setNumData] = React.useState(0);
 
+  React.useEffect(() => {
+    addNum();
+  }, [])
 
   console.log(nasaData); 
   
   const api_key = "gQBHOwp1QgftmdeZ3bO3KTnskprBBUwud1vmWgRz";
 
-  const displayElements = nasaData.map((el) => {
-    return Object.keys(el).map((item, i) => 
+  const displayElements = nasaData.map((el, i) => {
+    return (
       <Display 
-        key = {i}
-        copyright={el[item].copyright}
-        date={el[item].date}
-        explanation={el[item].explanation}
-        hdurl={el[item].hdurl}
-        media_type={el[item].media_type}
-        service_version={el[item].service_version}
-        title={el[item].title}
-        url={el[item].url}
+        key={i}
+        copyright={el.copyright}
+        date={el.date}
+        explanation={el.explanation}
+        hdurl={el.hdurl}
+        media_type={el.media_type}
+        service_version={el.service_version}
+        title={el.title}
+        url={el.url}
         />
       )
   })
 
-  React.useLayoutEffect(function() {
-
-    if (numData.up === true) {
-      fetch(
-        `https://api.nasa.gov/planetary/apod?api_key=${api_key}&count=${1}`
+  async function fetchNasaData() {
+    // fetch(
+    //   `https://api.nasa.gov/planetary/apod?api_key=${api_key}&count=${1}`
+    // )
+    // .then(res => res.json())
+    // .then(data => setNasaData(prevData => {
+    //   return [...prevData, data]
+    // }
+    //   ))
+    const newNasaData = await fetch(
+      `https://api.nasa.gov/planetary/apod?api_key=${api_key}&count=${1}`
       )
-      .then(res => res.json())
-      .then(data => setNasaData(prevData => {
-        return [...prevData, data]
-      }
-        ))
-    } else {
-        setNasaData(prevData => { 
-          let newArr = [];
-          for (let i = 0; i < prevData.length; i++) {
-            if (i < prevData.length - 1) {
-              newArr.push(prevData[i])
-            } else {
-              console.log('last one')
-            } 
-          }
-          return newArr
-      })
-    }
+    const newNasaDataJson = await newNasaData.json();
+    console.log(newNasaDataJson)
+    setNasaData(prevData => {
+      return [...prevData, newNasaDataJson[0]]
+    })
+  }
 
-  }, [numData.num])
+  function removeNasaData() {
+    setNasaData(prevData => { 
+      let newArr = [];
+      for (let i = 0; i < prevData.length; i++) {
+        if (i < prevData.length - 1) {
+          newArr.push(prevData[i])
+        } else {
+          console.log('last one')
+        } 
+      }
+      return newArr
+  })
+  }
 
   function addNum() {
     console.log('add fired')
-    setNumData(prevNum => ({
-      num: prevNum.num + 1,
-      up: true
-    }))
+    setNumData(prevNum => (
+      prevNum + 1      
+    ))
+    fetchNasaData();
   }
 
   function subtractNum() {
     
-    if (numData.num === 1) {
-      setNumData(prevNum => ({
-        num: 1,
-        up: false
-        }))
-    } else {
-      setNumData(prevNum => ({
-        num: prevNum.num - 1,
-        up: false
-      }))
+    if (numData > 1) {
+      setNumData(prevNum => (
+        prevNum - 1
+      ))
+      removeNasaData();
     }
+    
     console.log('subtact fired')
   }
  
   console.log(numData.num)
+  
   return (
     <React.StrictMode>
     <div className="main--container">
-      {displayElements}
-      <div className="button--container">
+      <div className="main--container-grid">{displayElements}</div>
+      <div id="buttonContainer" className="button--container">
         <button className="left-button" onClick={subtractNum} name="subtract"> - </button>
-          <div className="display">{numData.num}</div>
+          <div className="display">{numData}</div>
         <button className="right-button" onClick={addNum}> + </button>
       </div>
     </div>
