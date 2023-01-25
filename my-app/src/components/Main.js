@@ -52,15 +52,8 @@ export default function Main() {
 
   function removeNasaData() {
     setNasaData(prevData => { 
-      let newArr = [];
-      for (let i = 0; i < prevData.length; i++) {
-        if (i < prevData.length - 1) {
-          newArr.push(prevData[i])
-        } else {
-          console.log('last one')
-        } 
-      }
-      return newArr
+      let newArr = prevData.slice(0, -1)
+      return newArr;
   })
   }
 
