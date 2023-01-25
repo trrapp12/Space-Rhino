@@ -10,8 +10,6 @@ export default function Main() {
   React.useEffect(() => {
     addNum();
   }, [])
-
-  console.log(nasaData); 
   
   const api_key = "gQBHOwp1QgftmdeZ3bO3KTnskprBBUwud1vmWgRz";
 
@@ -44,7 +42,6 @@ export default function Main() {
       `https://api.nasa.gov/planetary/apod?api_key=${api_key}&count=${1}`
       )
     const newNasaDataJson = await newNasaData.json();
-    console.log(newNasaDataJson)
     setNasaData(prevData => {
       return [...prevData, newNasaDataJson[0]]
     })
@@ -58,7 +55,6 @@ export default function Main() {
   }
 
   function addNum() {
-    console.log('add fired')
     setNumData(prevNum => (
       prevNum + 1      
     ))
@@ -73,11 +69,7 @@ export default function Main() {
       ))
       removeNasaData();
     }
-    
-    console.log('subtact fired')
   }
- 
-  console.log(numData.num)
   
   return (
     <React.StrictMode>
