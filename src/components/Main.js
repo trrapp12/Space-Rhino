@@ -7,9 +7,6 @@ export default function Main() {
 
   const [numData, setNumData] = React.useState(0);
 
-  React.useEffect(() => {
-    addNum();
-  }, [])
 
   const api_key = "gQBHOwp1QgftmdeZ3bO3KTnskprBBUwud1vmWgRz";
 
@@ -27,7 +24,7 @@ export default function Main() {
     setNasaData(prevData => { 
       let newArr = prevData.slice(0, -1)
       return newArr;
-  })
+    })
   }
 
   function addNum() {
@@ -35,7 +32,7 @@ export default function Main() {
       prevNum + 1      
     ))
     fetchNasaData();
-    scrollDown();
+    // scrollDown();
   }
 
   function subtractNum() {
@@ -49,13 +46,26 @@ export default function Main() {
   }
 
   function scrollDown() {
-    let totalHeight = document.body.scrollHeight
-    let windowHeight = window.innerHeight;
-    window.scrollTo(0, totalHeight - windowHeight);
-  }
+    setTimeout(() => {
 
-  const displayElements = nasaData.map((el, i) => {
-    return (
+      let totalHeight = document.body.scrollHeight
+      let windowHeight = window.innerHeight;
+      // let h = document.querySelector('.main--container').getBoundingClientRect().innerHeight
+      // window.scrollTo(0, totalHeight - windowHeight);
+      window.scrollTo({
+        top: totalHeight - 1000,
+        behavior: 'smooth'
+      });
+      console.log({
+        totalHeight,
+        windowHeight
+      })
+    }, 250) //! ALT + up / down to move lines
+      // window.scrollTo(0, h);
+    }
+
+
+  const DisplayElements = () => nasaData.map((el, i) => 
       <Display 
         key={i}
         copyright={el.copyright}
@@ -67,13 +77,27 @@ export default function Main() {
         title={el.title}
         url={el.url}
         />
-      )
-  })
+  )
+
+  
+  React.useEffect(() => {
+    addNum();
+  }, []) // empty deps array - means only run once on component mount
+
+  // React.useEffect(() => {
+  //   addNum();
+  // }) // no deps array - run EVERY STATE CHANGE - ALL THE TIME
+
+  React.useEffect(() => {
+    scrollDown();
+  }, [nasaData])
   
   return (
     <React.StrictMode>
     <div className="main--container">
-      <div className="main--container-grid">{displayElements}</div>
+      <div className="main--container-grid">
+        <DisplayElements />
+         </div>
       <div id="buttonContainer" className="button--container">
         <button className="left-button" onClick={subtractNum} name="subtract"> - </button>
           <div className="display">{numData}</div>

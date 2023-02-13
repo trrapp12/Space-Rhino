@@ -74,6 +74,11 @@ body {
     position: absolute;
 }
 
+body, html {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
 button {
     background-color: var(--gravity-1-hex);
     color: white;
@@ -91,9 +96,12 @@ h1 {
 }
 
 img {
-    max-width: 100%;
     height: fit-content;
     margin-top: 2rem;
+}
+
+body > img, html > img {
+    max-width: 100%;
 }
 
 h3 {
@@ -113,6 +121,7 @@ p {
     grid-template-areas: "header header header"
         "content content content"
         "footer footer footer";
+        width: 100%;
     min-width: 100vw;
     min-height: 100vh;
     grid-template-rows: 20vh 1fr;
@@ -233,6 +242,17 @@ p {
     background-color: #010102;
     position: relative;
     padding: 2rem;
+    width: 100vw;
+    padding-bottom: 10vh;
+}
+
+.main--container img {
+    width: auto;
+    height: 100%;
+    max-height: 30vh;
+    min-width: 100%;
+    object-fit: cover;
+
 }
 
 .main--container-grid {
