@@ -39,6 +39,20 @@
     scroll-behavior: smooth;
 }
 
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+}
+
+body, html {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
 /* =============================== ELEMENTS  =============================== */
 
 a:link {
@@ -69,15 +83,7 @@ a:active {
     cursor: pointer;
 }
 
-body {
-    font-family: 'Josefin Sans', sans-serif;
-    position: absolute;
-}
 
-body, html {
-    min-width: 100vw;
-    min-height: 100vh;
-}
 
 button {
     background-color: var(--gravity-1-hex);
@@ -93,6 +99,7 @@ button {
 h1 {
     text-transform: uppercase;
     align-self: center;
+    font-size: 6em;
 }
 
 img {
@@ -157,7 +164,7 @@ p {
     grid-column-end: 4;
     background-color: var(--gravity-black-hex);
     color: white;
-    padding: 20px;
+    padding: 5em;
     background: rgb(64, 27, 89);
     background-image: url(./components/images/DALL_E_Rhino.png), linear-gradient(90deg, rgba(64, 27, 89, 1) 0%, rgba(83, 42, 140, 1) 15%, rgba(0, 0, 0, 1) 100%);
     background-repeat: no-repeat, repeat;
@@ -180,9 +187,9 @@ p {
     border-bottom: 86.96px solid var(--gravity-4-rgba-opacity);
     padding: 0px;
     background-color: transparent;
-    font-size: 6rem;
+    font-size: 3rem;
     line-height: 93px;
-    text-indent: -18px;
+    text-indent: -10px;
 }
 
 .main--display {
@@ -211,10 +218,14 @@ p {
 
 .right-button::after {
     content: " + ";
-    top: 210px;
-    left: 32px;
-    font-size: 5rem;
+    top: 213px;
+    left: 40px;
+    font-size: 3rem;
     position: absolute;
+}
+
+.sub-title {
+    font-size: 3em;
 }
 
 /* =============================== FOOTER SECTION  =============================== */
@@ -230,6 +241,7 @@ p {
     bottom: 0;
     left: 0;
     width: 100%;
+    background-color: #BF9C2630;
 }
 
 .footer--text {
@@ -241,7 +253,7 @@ p {
 .main--container {
     background-color: #010102;
     position: relative;
-    padding: 2rem;
+    padding: 20rem;
     width: 100vw;
     padding-bottom: 10vh;
 }
