@@ -53,7 +53,7 @@ export default function Main() {
       // let h = document.querySelector('.main--container').getBoundingClientRect().innerHeight
       // window.scrollTo(0, totalHeight - windowHeight);
       window.scrollTo({
-        top: totalHeight - 1000,
+        top: totalHeight - 800,
         behavior: 'smooth'
       });
       console.log({
