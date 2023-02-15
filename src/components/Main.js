@@ -1,11 +1,18 @@
 import React from "react";
 import Display from "./Display"
+import Modal from "./Modal"
 
 export default function Main() {
 
   const [nasaData, setNasaData] = React.useState([]);
 
   const [numData, setNumData] = React.useState(0);
+
+  const [showModal, setModal] = React.useState();
+
+  const [modalItem, setModalItem] = React.useState(null);
+
+  console.log(showModal, modalItem)
 
   const api_key = "gQBHOwp1QgftmdeZ3bO3KTnskprBBUwud1vmWgRz";
 
@@ -44,6 +51,18 @@ export default function Main() {
     }
   }
 
+  function updateModalItem (item) {
+    setModalItem(item)
+  }
+
+  function openModal() {
+    setModal(true)
+  }
+
+  function closeModal() {
+    setModal(false)
+  }
+
   function scrollDown() {
     setTimeout(() => {
 
@@ -69,12 +88,15 @@ export default function Main() {
         key={i}
         copyright={el.copyright}
         date={el.date}
+        el={el}
         explanation={el.explanation}
         hdurl={el.hdurl}
         media_type={el.media_type}
         service_version={el.service_version}
         title={el.title}
         url={el.url}
+        open={openModal}
+        update={updateModalItem}
         />
   )
 
@@ -94,6 +116,10 @@ export default function Main() {
   return (
     <React.StrictMode>
     <div className="main--container">
+      {showModal && modalItem && <Modal
+        modalItem = {modalItem}
+        closeFunc = {closeModal}
+      />}
       <div className="main--container-grid">
         <DisplayElements />
          </div>
