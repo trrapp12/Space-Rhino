@@ -248,13 +248,25 @@ svg:focus, svg:hover {
       grid-column-end: 4;
       grid-column-start: 1;
       left: 0;
+      opacity: 0;
       padding: 20px;
       position: fixed;
+      transition-duration: 500ms;
       width: 100%;
       z-index: 10;
   }
+
+  .footer--container:hover, .footer--container:focus {
+    opacity: 1;
+  }
+  
 .footer--text {
       margin: 0px 0px 10px 0px;
+  }
+
+  .visible {
+    opacity: 1;
+    transition-duration: 500ms;
   }
 
 /* =============================== MAIN SECTION  =============================== */
