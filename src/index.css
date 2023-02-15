@@ -140,59 +140,59 @@ svg:focus, svg:hover {
 /* =============================== HEADER SECTION  =============================== */
 
 .app--container {
-      display: grid;
-      grid-template-areas: 
-        "header header header"
-        "content content content"
-        "footer footer footer";
-      grid-template-rows: 20vh 1fr;
-      min-height: 100vh;
-      min-width: 100vw;
-      position: relative;
-      width: 100%;
-  }
-
-  .button--container {
-    align-items: unset;
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-    height: 100px;
-    justify-content: left;
-    left: 20px;
-    position: fixed;
-    top: calc(50vh - 100px);
-    width: auto;
-    z-index: 100;
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "content content content"
+    "footer footer footer";
+  grid-template-rows: 20vh 1fr;
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+  width: 100%;
 }
 
-  .display {
-    align-self: center;
-    color: white;
-    font-size: 1.5em;
-    line-height: 12px;
-    padding: 0px;
+.button--container {
+  align-items: unset;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  height: 100px;
+  justify-content: left;
+  left: 20px;
+  position: fixed;
+  top: calc(50vh - 100px);
+  width: auto;
+  z-index: 100;
 }
 
-  .header--container {
-    background: rgb(64, 27, 89);
-    background-blend-mode: lighten;
-    background-color: var(--gravity-black-hex);
-    background-image: url(./components/images/DALL_E_Rhino.png), linear-gradient(90deg, rgba(64, 27, 89, 1) 0%, rgba(83, 42, 140, 1) 15%, rgba(0, 0, 0, 1) 100%);
-    background-repeat: no-repeat, repeat;
-    background-size: auto 100%;
-    background-position: center right;
-    color: white;
-    display: grid;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    left: 0;
-    opacity: 1;
-    padding: 2em;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 30;
+.display {
+  align-self: center;
+  color: white;
+  font-size: 1.5em;
+  line-height: 12px;
+  padding: 0px;
+}
+
+.header--container {
+  background: rgb(64, 27, 89);
+  background-blend-mode: lighten;
+  background-color: var(--gravity-black-hex);
+  background-image: url(./components/images/DALL_E_Rhino.png), linear-gradient(90deg, rgba(64, 27, 89, 1) 0%, rgba(83, 42, 140, 1) 15%, rgba(0, 0, 0, 1) 100%);
+  background-repeat: no-repeat, repeat;
+  background-size: auto 100%;
+  background-position: center right;
+  color: white;
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  left: 0;
+  opacity: 1;
+  padding: 2em;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 30;
 }
 
 .left-button {
