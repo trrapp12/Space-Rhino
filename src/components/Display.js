@@ -1,5 +1,5 @@
 import React from 'react'
-import Ape from '../components/images/DALL_E_ape_small.png'
+import Ape from '../components/images/DALL_E_ape_x_small.png'
 
 export default function Display(props) {
     
@@ -7,7 +7,10 @@ export default function Display(props) {
         <div className="main--display">
             <h3>{props.title}</h3>
             <p className="margin-2em-bottom"><span className="brown-highlight">Star Date {props.date}</span></p>  
-            {props.media_type === "image" ? <img className="margin-2em-bottom" src={props.url}></img> : <img className="margin-2em-bottom" src={Ape}></img>}
+            <div className="image-container">
+                {props.media_type === "image" ? <img className="margin-2em-bottom" src={props.url}></img> : <img className="margin-2em-bottom" src={Ape} style="object-position: top;
+                object-fit: cover"></img>}
+            </div>
             <div className="main--display-p-content-container margin-2em-bottom">
                 <p className="main--display-p-content">{props.explanation}</p>
             </div>
