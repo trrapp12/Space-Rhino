@@ -292,6 +292,7 @@ svg:focus, svg:hover {
   justify-content: center;
   align-items: center;
   height: auto;
+  max-width: 450px;
 }
 
 .main--container {
