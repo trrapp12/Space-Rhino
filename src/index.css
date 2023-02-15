@@ -25,8 +25,19 @@
     --gravity-2-hsla: hsla(264, 53, 35, 1);
     --gravity-3-hsla: hsla(258, 50, 49, 1);
     --gravity-5-hsla: hsla(225, 82, 72, 1);
-    --gravity-4-hsla: hsla(247, 85, 64, 1);
+    --gravity-4-hsla: hsl(247, 85%, 64%);
 
+      --shadow-color: 247deg 85% 64%;
+      --shadow-elevation-low:
+        0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.54),
+        1.1px 2.2px 2.9px -2.1px hsl(var(--shadow-color) / 0.64);
+      --shadow-elevation-medium:
+        0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.75),
+        5.6px 11.2px 14.8px -2.1px hsl(var(--shadow-color) / 0.89);
+      --shadow-elevation-high:
+        0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.93),
+        7.4px 14.8px 19.6px -1px hsl(var(--shadow-color) / 1),
+        30.8px 61.5px 81.5px -2.1px hsl(var(--shadow-color) / 1);
 }
 
 
@@ -259,7 +270,7 @@ svg:focus, svg:hover {
   .footer--container:hover, .footer--container:focus {
     opacity: 1;
   }
-  
+
 .footer--text {
       margin: 0px 0px 10px 0px;
   }

@@ -20,8 +20,8 @@ export default function Display(props) {
             <h3>{props.title}</h3>
             <p className="margin-2em-bottom"><span className="brown-highlight">Star Date {props.date}</span></p>  
             <div className="image-container">
-                {props.media_type === "image" ? <img className="margin-2em-bottom" src={props.url}></img> : <img className="margin-2em-bottom" src={Ape} style="object-position: top;
-                object-fit: cover"></img>}
+                {props.media_type === "image" ? <img className="margin-2em-bottom" src={props.url}></img> : <img className="margin-2em-bottom" src={Ape} style={{objectPosition: "center",
+                objectFit: "cover" }}></img>}
             </div>
             <div className="main--display-p-content-container margin-2em-bottom">
                 <p className="main--display-p-content">{props.explanation}</p>
