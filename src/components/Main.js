@@ -7,7 +7,6 @@ export default function Main() {
 
   const [numData, setNumData] = React.useState(0);
 
-
   const api_key = "gQBHOwp1QgftmdeZ3bO3KTnskprBBUwud1vmWgRz";
 
   async function fetchNasaData() {

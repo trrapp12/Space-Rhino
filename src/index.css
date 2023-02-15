@@ -114,6 +114,10 @@ p {
       color: white;
   }
 
+svg:focus, svg:hover {
+  fill: var(--gravity-4-hex)
+}
+
 /* =============================== HEADER SECTION  =============================== */
 
 .app--container {
@@ -254,6 +258,10 @@ p {
   }
 
 /* =============================== MAIN SECTION  =============================== */
+
+.clicked {
+  fill: var(--gravity-4-hex)
+}
 
 .image-container {
   display: flex;
