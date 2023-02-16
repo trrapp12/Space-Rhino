@@ -59,10 +59,12 @@
   right: 0px;
 }
 
-.material-symbols-outlined:hover, 
-.material-symbols-outlined:focus {
-  transform: rotate(360deg);  
-  transition-duration: 1000ms;
+.material-symbols-outlined:focus, 
+.material-symbols-outlined:hover {
+  -webkit-transform: rotate(1turn);
+  transform: rotate(1turn);
+  transition-duration: 1s;
+  color: var(--gravity-4-rgba-opacity);
 }
 
 
