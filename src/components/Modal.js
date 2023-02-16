@@ -3,10 +3,16 @@ import Ape from '../components/images/DALL_E_ape_x_small.png'
 
 export default function Modal(props) {
 
-
+    function clickOutCloseModal(event) {
+        if (event.target.id === 'modal-main--display') {
+            props.closeFunc()
+        } else {
+            console.log('clicking inside the modal')
+        }
+    }
 
     return (
-    <div className="modal-main--display">
+    <div id="modal-main--display" className="modal-main--display" onClick={clickOutCloseModal}>
         <div className="modal-spacer">
         <span onClick={props.closeFunc} className="material-symbols-outlined">Close</span>
             <h1 className="modal-h1">{props.modalItem.title}</h1>
