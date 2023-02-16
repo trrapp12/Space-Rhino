@@ -68,8 +68,7 @@ export default function Main() {
 
       let totalHeight = document.body.scrollHeight
       let windowHeight = window.innerHeight;
-      // let h = document.querySelector('.main--container').getBoundingClientRect().innerHeight
-      // window.scrollTo(0, totalHeight - windowHeight);
+
       window.scrollTo({
         top: totalHeight - 800,
         behavior: 'smooth'
@@ -79,8 +78,8 @@ export default function Main() {
         windowHeight
       })
     }, 250) //! ALT + up / down to move lines
-      // window.scrollTo(0, h);
-    }
+
+  }
 
 
   const DisplayElements = () => nasaData.map((el, i) => 

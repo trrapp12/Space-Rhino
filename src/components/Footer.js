@@ -7,15 +7,6 @@ export default function Footer() {
   window.addEventListener('scroll', () => {
     console.log('scrolling in footer')
     const footer = document.getElementById('footer--container')
-    // if (visibility) {
-    //   console.log('visible')
-    //   toggleVisibility(!visibility)
-    // } else {
-    //   setTimeout(() => {
-    //     toggleVisibility(!visibility)
-    //     console.log('not visible')
-    //   }, 500)
-    // }
     toggleVisibility(false)
   })
 
