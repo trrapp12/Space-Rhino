@@ -146,6 +146,8 @@ h1 {
       align-self: center;
       font-size: 5em;
       text-transform: uppercase;
+      line-height: clamp(2.25rem, 2.763vw + 1.535rem, 7.475rem);
+      font-size: clamp(1.5rem, 2.247vw + 0.919rem, 5.75rem);
   }
 
 img {
@@ -280,7 +282,9 @@ svg:focus, svg:hover {
 }
 
 .sub-title {
-  font-size: 2em;
+  font-size: clamp(1.5rem, 1.19vw + 1.192rem, 3.75rem);
+  line-height: clamp(2.25rem, 1.388vw + 1.891rem, 4.875rem);
+  max-width: 50%;
 }
 
 .triangle {
@@ -313,8 +317,14 @@ svg:focus, svg:hover {
   z-index: 10;
 }
 
-.footer--container > h3, .footer--container > p {
-    transform: skew(-20deg) translateX(100px);
+.footer--container > h3 {
+    transform: skew(-20deg) translateX(70px);
+    font-size: clamp(0.75rem, 0.397vw + 0.647rem, 1.5rem);
+    line-height: clamp(1.125rem, 0.436vw + 1.012rem, 1.95rem);
+}
+
+.footer--container > p {
+  transform: skew(-20deg) translateX(56px);
 }
 
 .footer--wrapper:not(.visible):hover .footer--container, .footer--wrapper:focus .footer--container {
@@ -516,6 +526,20 @@ svg:focus, svg:hover {
 }
 
 @media (max-width: 900px) {
+
+  html{
+
+  }
+
+  .image-container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+    max-width: 380px;
+  }
+
   .main--container-grid {
       display: grid;
       gap: 2rem;
