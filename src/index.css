@@ -368,6 +368,7 @@ svg:focus, svg:hover {
   gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: masonry;
+  transition: 500ms;
 }
 
 .main--display-p-content {
@@ -469,6 +470,14 @@ svg:focus, svg:hover {
 }
 
 @media (max-width: 1450px) {
+  .main--container-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: masonry;
+      transition: 500ms;
+  }
+  
   .modal-image-container {
     display: inline-flex;
     flex-direction: row;
@@ -507,6 +516,14 @@ svg:focus, svg:hover {
 }
 
 @media (max-width: 900px) {
+  .main--container-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: masonry;
+      transition: 500ms;
+  }
+
   .modal-image-container > img {
     max-width: 25vw;
     margin: 2em 0;
