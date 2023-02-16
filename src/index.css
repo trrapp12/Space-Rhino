@@ -298,22 +298,23 @@ svg:focus, svg:hover {
 .footer--container {
   background-color: #BF9C2630;
   background-color: var(--gravity-1-hex);
+  border-right: 10px solid var(--gravity-4-rgba);
   bottom: 0;
   color: white;
   grid-column-end: 4;
   grid-column-start: 1;
-  left: calc(((100vw) * -1) + 50px);
-  opacity: 0;
+  left: calc(((100vw) * -1) + -30px);
+  opacity: 1;
   padding: 20px;
   position: fixed;
-  transform: skew(-20deg);
+  transform: skew(20deg);
   transition-duration: 500ms;
-  width: calc(100vw + 78px);
+  width: calc(100vw + 65px);
   z-index: 10;
 }
 
 .footer--container > h3, .footer--container > p {
-    transform: skew(20deg) translateX(100px);
+    transform: skew(-20deg) translateX(100px);
 }
 
 .footer--wrapper:not(.visible):hover .footer--container, .footer--wrapper:focus .footer--container {
