@@ -59,6 +59,12 @@
   right: 0px;
 }
 
+.material-symbols-outlined:hover, 
+.material-symbols-outlined:focus {
+  transform: rotate(360deg);  
+  transition-duration: 1000ms;
+}
+
 
 /* =============================== NORMALIZE  =============================== */
 
@@ -124,6 +130,17 @@ button {
       font-weight: 600;
       padding: 10px;
   }
+
+
+.left-button:hover,
+.left-button:focus {
+    border-bottom: 51.96px solid var(--gravity-1-rgba-opacity)
+  }
+
+.right-button:hover,
+.right-button:focus {
+  border-top: 51.96px solid var(--gravity-1-rgba-opacity)
+}
 
 h1 {
       align-self: center;
