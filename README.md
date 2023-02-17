@@ -28,13 +28,18 @@ https://user-images.githubusercontent.com/11747875/219746405-3f8ad569-3a10-4a93-
 ### Description:
 
 
-This is a personal passion project I started to challenge myself to learn how to connect to an API.  The lastest version demonstrates: 
+This is a personal passion project I started to challenge myself to learn how to connect to an API.  The lastest version demonstrates all of the previous PLUS: 
 
-- [x] Create functions to iterate through the objects and pull out the information from the object.
-- [x] Display photos and information in a better UX/UI experience.
-- [x] integrate React.JS to create use MVC to create templates for all the information.
-- [x] Create stateful components with the .useState() hook
-- [x] Monitor and update side effects with the .useEffect() hook
+
+🆕 Tracking multiple states with .useState() hook.
+
+🆕 Passing state from child -> parent and parent -> child
+
+🆕 use useEffect() hook to update effects 
+
+🆕 move from a purely Vanilla JavaScript app to a React App
+
+🆕 
 
 The original v1.0 was built on pure Vanilla JavaScript and demonstrated the following:
 
