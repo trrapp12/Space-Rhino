@@ -65,6 +65,7 @@
   transform: rotate(1turn);
   transition-duration: 1s;
   color: var(--gravity-4-rgba-opacity);
+  cursor: pointer;
 }
 
 
@@ -90,6 +91,7 @@ body, html {
 svg {
   fill: white;
   margin-right: 25px;
+  cursor: pointer;
 }
 
 /* =============================== ELEMENTS  =============================== */
@@ -136,12 +138,14 @@ button {
 
 .left-button:hover,
 .left-button:focus {
-    border-bottom: 51.96px solid var(--gravity-1-rgba-opacity)
+    border-bottom: 51.96px solid var(--gravity-1-rgba-opacity);
+    cursor: pointer;
   }
 
 .right-button:hover,
 .right-button:focus {
-  border-top: 51.96px solid var(--gravity-1-rgba-opacity)
+  border-top: 51.96px solid var(--gravity-1-rgba-opacity);
+  cursor: pointer;
 }
 
 h1 {
