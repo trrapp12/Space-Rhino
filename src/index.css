@@ -90,7 +90,6 @@ body, html {
 
 svg {
   fill: white;
-  margin-right: 25px;
   cursor: pointer;
 }
 
@@ -352,6 +351,16 @@ svg:focus, svg:hover {
 
 .clicked {
   fill: var(--gravity-4-hex)
+}
+
+.icon-holder {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 25px;
+    justify-content: flex-end;
+    align-content: stretch;
+    flex-wrap: wrap;
 }
 
 .image-container {
