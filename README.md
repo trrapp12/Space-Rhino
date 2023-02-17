@@ -31,7 +31,7 @@ https://user-images.githubusercontent.com/11747875/219746405-3f8ad569-3a10-4a93-
 This is a personal passion project I started to challenge myself to learn how to connect to an API.  The lastest version demonstrates all of the previous PLUS: 
 
 
-🆕 Tracking multiple states with .useState() hook.
+🆕 Tracking multiple stateful components and multiple states within the same component, using .useState() hook.
 
 🆕 Passing state from child -> parent and parent -> child
 
@@ -39,7 +39,16 @@ This is a personal passion project I started to challenge myself to learn how to
 
 🆕 move from a purely Vanilla JavaScript app to a React App
 
-🆕 
+🆕 use of ternary operators for conditional rendering of elements
+
+🆕 fancy modal :smile: :smile: :smile: 
+
+🆕 use Style Components
+
+🆕 spread and rest operators 
+
+🆕 automated scrolling effect
+
 
 The original v1.0 was built on pure Vanilla JavaScript and demonstrated the following:
 
