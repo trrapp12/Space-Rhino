@@ -438,7 +438,7 @@ svg:focus, svg:hover {
   left: 0;
   min-height: 100vh;
   min-width: 100vw;
-  z-index: 100;
+  z-index: 200;
   padding: 5vw 10vw;
   background: rgba(155, 155, 155, 0.22);
   border-radius: 16px;
