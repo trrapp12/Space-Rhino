@@ -71,6 +71,13 @@
 
 /* =============================== NORMALIZE  =============================== */
 
+* , *:before, *:after{ 
+  box-sizing:border-box; 
+  -moz-box-sizing:border-box; 
+  -webkit-box-sizing:border-box; 
+  -ms-box-sizing:border-box;
+}
+
 * {
       box-sizing: border-box;
       margin: 0;
@@ -263,6 +270,7 @@ svg:focus, svg:hover {
   overflow: clip;
   padding: 2em;
   text-overflow: ellipsis;
+  width: calc(100% - 4em);
   z-index: 10;
 }
 
@@ -448,9 +456,6 @@ svg:focus, svg:hover {
   border: 1px solid rgba(155, 155, 155, 0.61);
 }
 
-.modal-brown-highlight {
-
-}
 
 .modal-h1 {
   margin: 0 0 32px 0;
@@ -542,10 +547,6 @@ svg:focus, svg:hover {
 
 @media (max-width: 900px) {
 
-  html{
-
-  }
-
   .image-container {
     align-items: center;
     display: flex;
@@ -613,6 +614,7 @@ svg:focus, svg:hover {
     overflow: clip;
     padding: 1em;
     text-overflow: ellipsis;
+    width: calc(100% - 2em);
     z-index: 10;
   }
 
