@@ -14,7 +14,7 @@ export default function Main() {
 
   console.log(showModal, modalItem)
 
-  const api_key = "gQBHOwp1QgftmdeZ3bO3KTnskprBBUwud1vmWgRz";
+  const api_key = process.env.REACT_APP_API_KEY;
 
   async function fetchNasaData() {
 
