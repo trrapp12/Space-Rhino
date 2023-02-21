@@ -8,7 +8,7 @@ export default function Main() {
 
   const [numData, setNumData] = React.useState(1);
 
-  const [showModal, setModal] = React.useState();
+  const [showModal, setShowModal] = React.useState();
 
   const [modalItem, setModalItem] = React.useState(null);
 
@@ -17,13 +17,18 @@ export default function Main() {
   const api_key = "gQBHOwp1QgftmdeZ3bO3KTnskprBBUwud1vmWgRz";
 
   async function fetchNasaData() {
-    const newNasaData = await fetch(
-      `https://api.nasa.gov/planetary/apod?api_key=${api_key}&count=${1}`
-      )
-    const newNasaDataJson = await newNasaData.json();
-    setNasaData(prevData => {
-      return [...prevData, newNasaDataJson[0]]
-    })
+
+    try {
+      const newNasaData = await fetch(
+        `https://api.nasa.gov/planetary/apod?api_key=${api_key}&count=${1}`
+        )
+      const newNasaDataJson = await newNasaData.json();
+      setNasaData(prevData => {
+        return [...prevData, newNasaDataJson[0]]
+      })
+    } catch (err) {
+      console.error(`Nasa Data error: ${err}`)
+    }
   }
 
   function removeNasaData() {
@@ -56,11 +61,11 @@ export default function Main() {
   }
 
   function openModal() {
-    setModal(true)
+    setShowModal(true)
   }
 
   function closeModal() {
-    setModal(false)
+    setShowModal(false)
   }
 
   function scrollDown() {
