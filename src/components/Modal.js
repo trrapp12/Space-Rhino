@@ -18,8 +18,8 @@ export default function Modal(props) {
             <h1 className="modal-h1">{props.modalItem.title}</h1>
             <p className="margin-2em-bottom"><span className="modal-brown-highlight">Star Date {props.modalItem.date}</span></p>  
             <div className="modal-image-container">
-                {props.modalItem.media_type === "image" ? <img className="margin-2em-bottom" src={props.modalItem.url}></img> : <img className="margin-2em-bottom" src={Ape} style={{objectPosition: "center",
-                objectFit: "cover" }}></img>}
+                {props.modalItem.media_type === "image" ? <img className="margin-2em-bottom" src={props.modalItem.url} alt={props.modalItem.title}/> : <img className="margin-2em-bottom" src={Ape} style={{objectPosition: "center",
+                objectFit: "cover" }} alt="image of an ape in space with the words 'image not available' in front"/>}
                 <div className="modal-main--display-p-content-container margin-2em-bottom">
                     <p className="modal-main--display-p-content">{props.modalItem.explanation}</p>
                 </div>
