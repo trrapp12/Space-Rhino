@@ -6,7 +6,7 @@ export default function Main() {
 
   const [nasaData, setNasaData] = React.useState([]);
 
-  const [numData, setNumData] = React.useState(0);
+  const [numData, setNumData] = React.useState(1);
 
   const [showModal, setModal] = React.useState();
 
@@ -101,7 +101,7 @@ export default function Main() {
 
   
   React.useEffect(() => {
-    addNum();
+    fetchNasaData();
   }, []) // empty deps array - means only run once on component mount
 
   // React.useEffect(() => {
