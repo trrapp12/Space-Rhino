@@ -458,6 +458,7 @@ svg:focus, svg:hover {
 
 
 .modal-h1 {
+  color: #bbbbbb;
   margin: 0 0 32px 0;
   transition: 1000ms;
 }
