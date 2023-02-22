@@ -6,6 +6,7 @@ export default function Display(props) {
 
     const [clicked, setClick] = React.useState(false)
     const [clicked2, setClick2] = React.useState(false)    
+    const [clicked3, setClick3] = React.useState(false)
 
     function clickHandler1(event) {
         setClick(!clicked)
@@ -17,7 +18,8 @@ export default function Display(props) {
         props.update(props.el)
     }
 
-    async function clickHandler3() {
+    async function clickHandler3(event) {
+        setClick3(!clicked)
 
         try {
 
@@ -48,18 +50,6 @@ export default function Display(props) {
             console.error("Error sharing: ", error)
         }
 
-// This works but doesn't include the photo
-
-        // const shareData = {
-        //     title: 'My shared item',
-        //     text: 'Check out this cool thing I found!',
-        //     url: 'https://example.com/my-item'
-        //   };
-          
-        //   navigator.share(shareData)
-        //     .then(() => console.log('Shared successfully!'))
-        //     .catch(error => console.error('Error sharing:', error));
-
     }
 
     return (
@@ -74,14 +64,14 @@ export default function Display(props) {
                 <p className="main--display-p-content">{props.explanation}</p>
             </div>
             <div className="icon-holder">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" onClick={clickHandler1} className={clicked ? "clicked" : ""}>
-                    <path d="m12 21.9-1.85-1.7q-2.75-2.525-4.487-4.288Q3.925 14.15 2.925 12.8t-1.363-2.488Q1.2 9.175 1.2 7.95q0-2.625 1.8-4.413Q4.8 1.75 7.45 1.75q1.2 0 2.4.487 1.2.488 2.15 1.363.95-.875 2.15-1.363 1.2-.487 2.4-.487 2.65 0 4.45 1.787 1.8 1.788 1.8 4.413 0 1.225-.362 2.362-.363 1.138-1.363 2.488t-2.737 3.112Q16.6 17.675 13.85 20.2Z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 96 960 960" width="24" onClick={clickHandler1} className={clicked ? "clicked" : ""}>
+                    <path d="m480 972-74-68Q296 803 226.5 732.5T117 608q-40-54-54.5-99.5T48 414q0-105 72-176.5T298 166q48 0 96 19.5t86 54.5q38-35 86-54.5t96-19.5q106 0 178 71.5T912 414q0 49-14.5 94.5T843 608q-40 54-109.5 124.5T554 904l-74 68Zm0-144q98-89 161-151.5t100-109q37-46.5 51-82t14-71.5q0-61-40.5-101.5T662 272q-45 0-86 27t-46 59H430q-5-32-46-59t-86-27q-63 0-103.5 40.5T154 414q0 36 14 71.5t51 82q37 46.5 100 109T480 828Zm0-278Z"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" onClick={clickHandler2} className={clicked2 ? "clicked" : ""}>
-                    <path d="M4.55 19.45v-5.5H7.2v2.85h2.85v2.65Zm0-9.4v-5.5h5.5V7.2H7.2v2.85Zm9.4 9.4V16.8h2.85v-2.85h2.65v5.5Zm2.85-9.4V7.2h-2.85V4.55h5.5v5.5Z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 96 960 960" width="24" onClick={clickHandler2} className={clicked2 ? "clicked" : ""}>
+                    <path d="M194 968q-43.725 0-74.863-31.138Q88 905.725 88 862V290q0-43.725 31.137-74.862Q150.275 184 194 184h305v106H194v572h572V557h106v305q0 43.725-31.138 74.862Q809.725 968 766 968H194Zm191-223-74-74 381-381H579V184h293v293H766V364L385 745Z"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 96 960 960" width="24" onClick={clickHandler3}>
-                    <path d="M727.118 997q-55.701 0-95.91-40.43Q591 916.14 591 862.055q0-7.707 2-18.549 2-10.842 4-20.297L330.288 667Q311 687 286.654 699.5T234.448 712q-54.937 0-95.192-40.368Q99 631.265 99 575.882q0-55.382 40.256-95.132Q179.511 441 234.448 441q27.506 0 51.529 10.5Q310 462 330 482l267-154.292q-2-6.936-4-18.129-2-11.192-2-18.965 0-54.947 40.091-94.781Q671.181 156 726.882 156q54.618 0 94.868 39.868Q862 235.735 862 291.118q0 55.382-40.255 95.132Q781.489 426 726.552 426q-29.213 0-52.459-7.969-23.246-7.969-41.381-28.031L365 536.209q2 8.741 3.5 20.94 1.5 12.199 1.5 19.092 0 6.894-1.5 16.352-1.5 9.457-3.5 18.198L632.712 761q18.135-16.062 40.558-25.531Q695.692 726 726.552 726q54.937 0 95.193 40.368Q862 806.735 862 862.118q0 54.382-40.132 94.632Q781.735 997 727.118 997Z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 96 960 960" width="24" onClick={clickHandler3} className={clicked3 ? "clicked" : ""}>
+                    <path d="M725.176 994Q669 994 629.5 954.917 590 915.833 590 860q0-6.5 1-13.464 1-6.965 3-12.536L322 678q-18 15-40.5 22.5T236 708q-56.667 0-96.333-39.118-39.667-39.117-39.667-95Q100 518 139.667 479q39.666-39 96.333-39 23 0 45.5 7.5T322 470l272-156.022q-2-5.708-3-12.843T590 288q0-55.833 39.323-94.917Q668.647 154 724.824 154 781 154 820.5 193.118q39.5 39.117 39.5 95Q860 344 820.333 383 780.667 422 724 422q-23 0-45.5-7.5T638 392L366 548q2 5.571 3 12.536 1 6.964 1 13.464t-1 13.464q-1 6.965-3 12.536l272 156q18-15 40.5-22.5T724 726q56.667 0 96.333 39.118 39.667 39.117 39.667 95Q860 916 820.677 955q-39.324 39-95.501 39Zm-.404-678q12.228 0 20.728-8.272 8.5-8.272 8.5-20.5t-8.272-20.728q-8.272-8.5-20.5-8.5t-20.728 8.272q-8.5 8.272-8.5 20.5t8.272 20.728q8.272 8.5 20.5 8.5Zm-490 286q12.228 0 20.728-8.272 8.5-8.272 8.5-20.5t-8.272-20.728q-8.272-8.5-20.5-8.5t-20.728 8.272q-8.5 8.272-8.5 20.5t8.272 20.728q8.272 8.5 20.5 8.5Zm490 286q12.228 0 20.728-8.272 8.5-8.272 8.5-20.5t-8.272-20.728q-8.272-8.5-20.5-8.5t-20.728 8.272q-8.5 8.272-8.5 20.5t8.272 20.728q8.272 8.5 20.5 8.5ZM725 287ZM235 573Zm490 286Z"/>
                 </svg>
             </div>
         </div>
