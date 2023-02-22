@@ -1,6 +1,6 @@
 import React from "react";
-import Display from "./Display"
 import Modal from "./Modal"
+import DisplayElements from "./DisplayElements";
 
 export default function Main() {
 
@@ -87,22 +87,7 @@ export default function Main() {
   }
 
 
-  const DisplayElements = () => nasaData.map((el, i) => 
-      <Display 
-        key={i}
-        copyright={el.copyright}
-        date={el.date}
-        el={el}
-        explanation={el.explanation}
-        hdurl={el.hdurl}
-        media_type={el.media_type}
-        service_version={el.service_version}
-        title={el.title}
-        url={el.url}
-        open={openModal}
-        update={updateModalItem}
-        />
-  )
+  
 
   
   React.useEffect(() => {
@@ -125,7 +110,11 @@ export default function Main() {
         closeFunc = {closeModal}
       />}
       <div className="main--container-grid">
-        <DisplayElements />
+        <DisplayElements 
+          nasaData={nasaData}
+          openModal={openModal}
+          updateModalItem={updateModalItem}
+        />
          </div>
       <div id="buttonContainer" className="button--container">
         <button className="left-button" onClick={subtractNum} name="subtract"> - </button>

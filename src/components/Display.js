@@ -36,7 +36,7 @@ export default function Display(props) {
                 files: [imageBlob],
             };
 
-            await share.share(shareData);
+            await share(shareData);
 
             console.log("Shared successfully");
 
@@ -44,6 +44,18 @@ export default function Display(props) {
 
             console.error("Error sharing: ", error)
         }
+
+// This works but doesn't include the photo
+
+        // const shareData = {
+        //     title: 'My shared item',
+        //     text: 'Check out this cool thing I found!',
+        //     url: 'https://example.com/my-item'
+        //   };
+          
+        //   navigator.share(shareData)
+        //     .then(() => console.log('Shared successfully!'))
+        //     .catch(error => console.error('Error sharing:', error));
 
     }
 
