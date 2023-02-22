@@ -1,6 +1,6 @@
 import React from 'react'
 import Ape from '../components/images/DALL_E_ape_x_small.png'
-import Rhino from '../components/images/DALL_E_Rhino.png'
+import Rhino from '../components/images/DALL_E_Rhino_640.png'
 
 export default function Display(props) {
 
