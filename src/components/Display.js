@@ -20,8 +20,8 @@ export default function Display(props) {
     async function clickHandler3() {
 
         try {
-            const share = navigator.share;
-            if (!share) {
+
+            if (!navigator.share) {
                 throw new Error('Share API not supported')
             }
 
@@ -29,14 +29,17 @@ export default function Display(props) {
             const title = 'Space Rhino';
             const url = 'https://space-rhino.com'
             const imageBlob = await fetch(Rhino).then(response => response.blob());
+            const file = new File([imageBlob], 'image.png', { type: 'image/png' });
+
+            console.log(imageBlob)
             const shareData = {
                 title: title,
                 text: text,
                 url: url,
-                files: [imageBlob],
+                files: [file],
             };
 
-            await share(shareData);
+           await navigator.share(shareData);
 
             console.log("Shared successfully");
 
