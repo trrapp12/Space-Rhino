@@ -1,5 +1,6 @@
 import React from 'react'
 import Ape from '../components/images/DALL_E_ape_x_small.png'
+import Rhino from '../components/images/DALL_E_Rhino.png'
 
 export default function Display(props) {
 
@@ -16,20 +17,34 @@ export default function Display(props) {
         props.update(props.el)
     }
 
-async function clickHandler3 () {
-
-    const shareData = {
-            title: 'Space Rhino',
-            text: 'Learn web development on MDN!',
-            url: 'https://space-rhino.com'
-        }
+    async function clickHandler3() {
 
         try {
-            await navigator.share(shareData);
+            const share = navigator.share;
+            if (!share) {
+                throw new Error('Share API not supported')
+            }
 
-        } catch (err) {
-          console.error(`Error: ${err}`);
+            const text = 'Check out amazing astro-photography straight from NASA';
+            const title = 'Space Rhino';
+            const url = 'https://space-rhino.com'
+            const imageBlob = await fetch(Rhino).then(response => response.blob());
+            const shareData = {
+                title: title,
+                text: text,
+                url: url,
+                files: [imageBlob],
+            };
+
+            await share.share(shareData);
+
+            console.log("Shared successfully");
+
+        } catch (error) {
+
+            console.error("Error sharing: ", error)
         }
+
     }
 
     return (
