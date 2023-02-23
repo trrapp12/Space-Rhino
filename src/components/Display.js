@@ -7,11 +7,20 @@ export default function Display(props) {
     const [clicked, setClick] = React.useState(false)
     const [clicked2, setClick2] = React.useState(false)    
     const [clicked3, setClick3] = React.useState(false)
+    const [entryNumber, setEntryNumber] = React.useState(1)
 
     function clickHandler1(event) {
-        setClick(!clicked)
-    }
+        setEntryNumber(prevNum => prevNum + 1)
+        const favObj = {
+            "title" : `${props.title}`, 
+            "url" : `${props.url}`
+        }
+        localStorage.setItem(`Space Rhino Favorites #${entryNumber}`, JSON.stringify(favObj))
 
+        setClick(!clicked)
+
+    }
+    
     function clickHandler2(event) {
         setClick2(!clicked2)
         props.open();
