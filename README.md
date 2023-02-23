@@ -1,3 +1,5 @@
+<base target="_blank">
+
 # Nasa-Photo-V2
 
 ##### Contributors: Trevor Rapp
