@@ -6,7 +6,7 @@ https://user-images.githubusercontent.com/11747875/220780742-72830504-a9ce-48e9-
 
 <br>
 
-[![View Project](https://user-images.githubusercontent.com/11747875/141830030-bb37c7b2-7c74-43fa-b705-779189b9f380.png)](https://space-rhino.com){:target="_blank"}
+[![View Project](https://user-images.githubusercontent.com/11747875/141830030-bb37c7b2-7c74-43fa-b705-779189b9f380.png)][link](https://space-rhino.com){:target="_blank"}
 
 <br>
 
