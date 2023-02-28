@@ -392,19 +392,20 @@ svg:focus, svg:hover {
 /* =============================== MAIN SECTION  =============================== */
 
 .button-bookmark {
-  width: 6rem;
-  background-color: var(--gravity-1-hex);
+  background-color: #401b59;
+  background-color: rgb(64 27 89 / 35%);
+  border: 0 0 2px 2px;
+  border-bottom: 2px solid #401b59;
+  border-bottom: 2px solid var(--gravity-1-hex);
+  border-radius: 0 0 5px 5px;
+  border-right: 2px solid #683fbf;
+  border-right: 2px solid var(--gravity-3-hex);
+  bottom: 0;
   height: 5rem;
   position: absolute;
   top: 20vh;
+  width: 6rem;
   z-index: 200;
-  bottom: 0;
-  position: absolute;
-  border: solid 0px 2px 2px 0px white;
-  border: 0px 0px 2px 2px;
-  border-bottom: 2px var(--gravity-1-hex) solid;
-  border-right: 2px solid var(--gravity-3-hex);
-  border-radius: 0px 0px 5px 5px;
 }
 
 button > svg {
