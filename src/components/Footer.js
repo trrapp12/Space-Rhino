@@ -17,7 +17,5 @@ export default function Footer() {
         <p className="lower-opacity">All materials used are part of the public domain</p>
       </div>
     </div>
-
-    
   );
 }

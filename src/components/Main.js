@@ -87,9 +87,6 @@ export default function Main() {
   }
 
 
-  
-
-  
   React.useEffect(() => {
     fetchNasaData();
   }, []) // empty deps array - means only run once on component mount
@@ -108,6 +105,7 @@ export default function Main() {
       {showModal && modalItem && <Modal
         modalItem = {modalItem}
         closeFunc = {closeModal}
+        
       />}
       <div className="main--container-grid">
         <DisplayElements 

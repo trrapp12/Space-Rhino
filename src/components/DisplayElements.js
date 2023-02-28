@@ -3,7 +3,6 @@ import Display from './Display'
 
 export default function DisplayElements({nasaData, openModal, updateModalItem}) {
     
-    
     return (
         <>
         { nasaData.map((el, i) => 

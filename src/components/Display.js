@@ -9,16 +9,24 @@ export default function Display(props) {
     const [clicked3, setClick3] = React.useState(false)
     const [entryNumber, setEntryNumber] = React.useState(1)
 
+    let bookKey = 0;
+
     function clickHandler1(event) {
         setEntryNumber(prevNum => prevNum + 1)
-        const favObj = {
-            "title" : `${props.title}`, 
-            "url" : `${props.url}`
-        }
-        localStorage.setItem(`Space Rhino Favorites #${entryNumber}`, JSON.stringify(favObj))
-
+        setFavorites();
         setClick(!clicked)
 
+    }
+
+    function setFavorites() {
+        const bookMarkTitle = props.title; 
+        const bookMarkURL = props.url;
+        const bookMarkObj = JSON.stringify({
+            title: bookMarkTitle,
+            url: bookMarkURL
+        })
+        localStorage.setItem(bookKey, bookMarkObj)
+        bookKey ++;
     }
     
     function clickHandler2(event) {

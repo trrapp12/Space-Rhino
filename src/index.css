@@ -211,7 +211,7 @@ svg:focus, svg:hover {
   position: fixed;
   top: calc(50vh - 100px);
   width: auto;
-  z-index: 100;
+  z-index: 10;
 }
 
 .display {
@@ -220,6 +220,34 @@ svg:focus, svg:hover {
   font-size: 1.5em;
   line-height: 12px;
   padding: 0px;
+}
+
+.drop-down {
+  left: 0;
+  height: 100vh;
+  opacity: 1;
+  padding: 2em;
+  position: absolute;
+  bottom: 80vh;
+  width: 100vw;
+  z-index: 11;
+}
+
+.drop-down-active {
+  background-color: #262626;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  top: 20vh;
+  width: 100vw;
+  z-index: 11;
+  height: 100vh;
+  padding: 5em;
+}
+
+.drop-down-active > h1 {
+  font-size: 1.5rem;
+  height: auto;
 }
 
 .header--container {
@@ -327,7 +355,7 @@ svg:focus, svg:hover {
   transform: skew(20deg);
   transition-duration: 500ms;
   width: calc(100vw + 65px);
-  z-index: 10;
+  z-index: 12;
 }
 
 .footer--container > h3 {
@@ -356,6 +384,26 @@ svg:focus, svg:hover {
 }
 
 /* =============================== MAIN SECTION  =============================== */
+
+.button-bookmark {
+  width: 6rem;
+  height: 5rem;
+  position: absolute;
+  top: 20vh;
+  z-index: 200;
+  bottom: 0;
+  position: absolute;
+  border: solid 0px 2px 2px 0px white;
+  border: 0px 0px 2px 2px;
+  border-bottom: 2px var(--gravity-1-hex) solid;
+  border-right: 2px solid var(--gravity-3-hex);
+  border-radius: 0px 0px 5px 5px;
+  background-color: rgb(64 26 89 / 0%);
+}
+
+button > svg {
+  fill: var(--gravity-2-hex)
+}
 
 .clicked {
   fill: var(--gravity-4-hex)
