@@ -28,7 +28,7 @@ https://user-images.githubusercontent.com/11747875/220780742-72830504-a9ce-48e9-
 ### Description:
 
 
-This is a personal passion project I started to challenge myself to learn how to connect to an API.  The lastest version demonstrates all of the previous PLUS: 
+This is a personal passion project I started to challenge myself to learn how to connect to an API.  The latest version demonstrates all of the previous PLUS: 
 
 
 🆕 Tracking multiple stateful components and multiple states within the same component, using .useState() hook.
