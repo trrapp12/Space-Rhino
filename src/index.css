@@ -404,16 +404,19 @@ svg:focus, svg:hover {
   height: 5rem;
   position: absolute;
   top: 20vh;
+
   width: 6rem;
   z-index: 200;
 }
 
 button > svg {
-  fill: var(--gravity-4-rgba)
+  fill: var(--gravity-4-rgba);
+  transition-duration: 250ms;
 }
 
 button > svg:hover, 
 button > svg:focus {
+  transition-duration: 250ms;
   fill: black;
 }
 
