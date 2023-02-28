@@ -234,7 +234,7 @@ svg:focus, svg:hover {
 }
 
 .drop-down-active {
-  background-color: #262626;
+  background-color: #010102;
   left: 0;
   opacity: 1;
   position: absolute;
@@ -248,6 +248,12 @@ svg:focus, svg:hover {
 .drop-down-active > h1 {
   font-size: 1.5rem;
   height: auto;
+  color: #BF9C26;
+}
+
+.drop-down-li {
+  line-height: 3rem;
+  color: var(---gravity-5-hex)
 }
 
 .header--container {
@@ -387,6 +393,7 @@ svg:focus, svg:hover {
 
 .button-bookmark {
   width: 6rem;
+  background-color: var(--gravity-1-hex);
   height: 5rem;
   position: absolute;
   top: 20vh;
@@ -398,11 +405,15 @@ svg:focus, svg:hover {
   border-bottom: 2px var(--gravity-1-hex) solid;
   border-right: 2px solid var(--gravity-3-hex);
   border-radius: 0px 0px 5px 5px;
-  background-color: rgb(64 26 89 / 0%);
 }
 
 button > svg {
-  fill: var(--gravity-2-hex)
+  fill: var(--gravity-4-rgba)
+}
+
+button > svg:hover, 
+button > svg:focus {
+  fill: black;
 }
 
 .clicked {

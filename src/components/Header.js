@@ -46,17 +46,22 @@ export default function Header() {
       </button>
       <div className={active ? "drop-down-active" : "drop-down"}>
         <h1>Rhino Favorites: On Point</h1>
-      {
+        <ul>
+        {
         bookmarkData.map((item) => {
               var title = item.title;
               var url = item.url;
           return (
             <>
-              <a href={url} target="_blank">{title}</a>
+              <li>
+                <a href={url} target="_blank">{title}</a>
+              </li>
             </>
           )
         })
       }
+        </ul>
+
       </div>
     </>
   );
