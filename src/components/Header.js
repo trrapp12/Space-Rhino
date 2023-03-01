@@ -53,8 +53,8 @@ export default function Header() {
               var url = item.url;
           return (
             <>
-              <li>
-                <a href={url} target="_blank">{title}</a>
+              <li className="drop-down-li">
+                <a href={url} target="_blank" rel="noreferrer">{title}</a>
               </li>
             </>
           )

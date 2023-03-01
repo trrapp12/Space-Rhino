@@ -7,12 +7,10 @@ export default function Display(props) {
     const [clicked, setClick] = React.useState(false)
     const [clicked2, setClick2] = React.useState(false)    
     const [clicked3, setClick3] = React.useState(false)
-    const [entryNumber, setEntryNumber] = React.useState(1)
 
-    let bookKey = 0;
+    let bookKey = localStorage.length | 0;
 
     function clickHandler1(event) {
-        setEntryNumber(prevNum => prevNum + 1)
         setFavorites();
         setClick(!clicked)
 
@@ -74,7 +72,7 @@ export default function Display(props) {
             <h3>{props.title}</h3>
             <p className="margin-2em-bottom"><span className="brown-highlight">Star Date {props.date}</span></p>  
             <div className="image-container">
-                {props.media_type === "image" ? <img className="margin-2em-bottom" src={props.url}></img> : <img className="margin-2em-bottom" src={Ape} style={{objectPosition: "center",
+                {props.media_type === "image" ? <img className="margin-2em-bottom" src={props.url} alt={props.title}></img> : <img className="margin-2em-bottom" src={Ape} alt={props.title} style={{objectPosition: "center",
                 objectFit: "cover" }}></img>}
             </div>
             <div className="main--display-p-content-container margin-2em-bottom">

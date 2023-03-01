@@ -230,8 +230,8 @@ svg:focus, svg:hover {
   height: 100vh;
   opacity: 1;
   padding: 2em;
-  position: absolute;
-  bottom: 80vh;
+  position: sticky;
+  bottom: 0vh;
   width: 100vw;
   z-index: 11;
 }
@@ -240,7 +240,7 @@ svg:focus, svg:hover {
   background-color: #010102;
   left: 0;
   opacity: 1;
-  position: absolute;
+  position: sticky;
   top: 20vh;
   width: 100vw;
   z-index: 11;
@@ -251,7 +251,7 @@ svg:focus, svg:hover {
 .drop-down-active > h1 {
   font-size: 1.5rem;
   height: auto;
-  color: #BF9C26;
+  color: var(--gravity-4-rgba);
 }
 
 .drop-down-li {
