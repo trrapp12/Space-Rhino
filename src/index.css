@@ -146,12 +146,14 @@ button {
 .left-button:focus {
     border-bottom: 51.96px solid var(--gravity-1-rgba-opacity);
     cursor: pointer;
+    transition-duration: 250ms;
   }
 
 .right-button:hover,
 .right-button:focus {
   border-top: 51.96px solid var(--gravity-1-rgba-opacity);
   cursor: pointer;
+  transition-duration: 250ms;
 }
 
 h1 {
@@ -182,7 +184,8 @@ p {
   }
 
 svg:focus, svg:hover {
-  fill: var(--gravity-4-hex)
+  fill: var(--gravity-4-hex);
+  transition-duration: 250ms;
 }
 
 /* =============================== HEADER SECTION  =============================== */
@@ -287,6 +290,7 @@ svg:focus, svg:hover {
   line-height: 61px;
   padding: 0px;
   text-indent: -7px;
+  transition-duration: 250ms;
   width: 0;
 }
 
@@ -317,6 +321,7 @@ svg:focus, svg:hover {
   line-height: 62px;
   padding: 0px;
   text-indent: -6px;
+  transition-duration: 250ms;
   width: 0;
 }
 
@@ -392,8 +397,9 @@ svg:focus, svg:hover {
 /* =============================== MAIN SECTION  =============================== */
 
 .button-bookmark {
+  /* animation: pulse 10s ease infinite;     */
   background-color: #401b59;
-  background-color: rgb(64 27 89 / 35%);
+  background-color: rgb(64 27 89 / 18%);
   border: 0 0 2px 2px;
   border-bottom: 2px solid #401b59;
   border-bottom: 2px solid var(--gravity-1-hex);
@@ -404,9 +410,12 @@ svg:focus, svg:hover {
   height: 5rem;
   position: absolute;
   top: 20vh;
-
   width: 6rem;
   z-index: 200;
+}
+
+.button-bookmark:hover, .button-bookmark:focus {
+  animation: pulse 2s ease;
 }
 
 button > svg {
@@ -722,4 +731,137 @@ button > svg:focus {
     transform: skew(-20deg) translateX(56px);
     font-size: .75rem;
   }
+}
+
+@keyframes pulse {
+  0% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 100%, rgba(64,27,89,1) 100%);
+  }
+
+  1% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 90%, rgba(64,27,89,1) 100%);
+  }
+
+  2% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 80%, rgba(64,27,89,1) 100%);
+  }
+
+  3% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 70%, rgba(64,27,89,1) 100%);
+  }
+
+  4% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 60%, rgba(64,27,89,1) 100%);
+  }
+
+  5% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 50%, rgba(64,27,89,1) 100%);
+  }
+
+  6% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 40%, rgba(64,27,89,1) 100%);
+  }
+
+  7% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 30%, rgba(64,27,89,1) 100%);
+  }
+
+  8% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 20%, rgba(64,27,89,1) 100%);
+  }
+
+  9% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 10%, rgba(64,27,89,1) 100%);
+  }
+
+  10% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 0%, rgba(64,27,89,1) 100%);
+  }
+
+  11% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 10%, rgba(64,27,89,1) 100%);
+  }
+
+  12% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 20%, rgba(64,27,89,1) 100%);
+  }
+
+  13% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 30%, rgba(64,27,89,1) 100%);
+  }
+
+  14% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 40%, rgba(64,27,89,1) 100%);
+  }
+
+  15% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 50%, rgba(64,27,89,1) 100%);
+  }
+
+  16% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 60%, rgba(64,27,89,1) 100%);
+  }
+
+  17% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 70%, rgba(64,27,89,1) 100%);
+  }
+
+  18% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 80%, rgba(64,27,89,1) 100%);
+  }
+
+  19% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 90%, rgba(64,27,89,1) 100%);
+  }
+
+  20% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 100%, rgba(64,27,89,1) 100%);
+  }
+
+  36% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 100%, rgba(64,27,89,1) 0%);
+  }
+
+  52% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 100%, rgba(64,27,89,1) 10%);
+  }
+
+  68% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 100%, rgba(64,27,89,1) 20%);
+  }
+
+  80% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 100%, rgba(64,27,89,1) 30%);
+  }
+
+  100% {
+    background: rgb(4,4,4);
+    background: radial-gradient(circle, rgba(4,4,4,1) 100%, rgba(64,27,89,1) 40%);
+  }
+
 }
