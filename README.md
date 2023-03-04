@@ -55,7 +55,7 @@ So when I came to a point in my learning that I needed to learn how to connect t
 
 ### CHALLENGES I HAVE OVERCOME:
 
-The original v1.0 was built on pure Vanilla JavaScript and demonstrated the following:
+The original v1.0 was built on pure Vanilla JavaScript.  It demonstrated the following:
 
 - [x] Use of vanilla JavaScript to connect to an API.
 - [x] ```JSON.parse().```
@@ -64,8 +64,9 @@ The original v1.0 was built on pure Vanilla JavaScript and demonstrated the foll
 - [x] Use of ```querySelector()``` and ```querySelectorAll()```.
 - [x] Use of template literals `` ` ``  and placeholders `&{}`.
 
-<br/>
-<br/>
+This was a cool accomplishment for me to see an API bring back information for the first time.  It was pretty freakin' awesome!  But it was also a non-sensical display of JSON.  To get this into something that would work in an App I knew I would have to bring in React.  At that point in my studies I had no experience with it.  So by far the biggest obstacle was learning React.  
+
+
 
 ---
 
