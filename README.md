@@ -22,9 +22,16 @@ https://user-images.githubusercontent.com/11747875/220780742-72830504-a9ce-48e9-
 
 ### Description:
 
+> “He insisted that stars were people so well loved, they were traced in constellations, to live forever”
+> ― Jodi Picoult, My Sister's Keeper
 
-This is a personal passion project I started to challenge myself to learn how to connect to an API.  The latest version demonstrates all of the previous PLUS: 
+I have always loved astronomy.  One of the most transformative moments I had was as a young scout paddling on the waters of Lee Lakes near the Grand Tetons on a night devoid of any human source of light.  Above me was a skyscape of stars so impressive and immediate that if I stood up in my canoe I would have surely hit my head on the milky way. 
 
+So when I came to a point in my learning that I needed to learn how to connect to an API, I knew I wanted to connect to NASAs.  With hard work and many, many iterations, I now have a project that can take my love of astronomy and hopefully use it to inspire other people.  
+
+---
+
+### THIS PROJECT DEMONSTRATES
 
 🆕 Tracking multiple stateful components and multiple states within the same component, using .useState() hook.
 
@@ -44,6 +51,9 @@ This is a personal passion project I started to challenge myself to learn how to
 
 🆕 automated scrolling effect
 
+---
+
+### CHALLENGES I HAVE OVERCOME:
 
 The original v1.0 was built on pure Vanilla JavaScript and demonstrated the following:
 
@@ -63,12 +73,8 @@ The original v1.0 was built on pure Vanilla JavaScript and demonstrated the foll
 
 Contributors: Trevor Rapp
 
-<a href="https://www.flaticon.com/free-icons/react" title="react icons">React icons created by Freepik - Flaticon</a>
 ---
 
 ### YOU CAN FIND ME AT:
 
 \**For more information see my [LinkedIn](https://www.linkedin.com/in/trevor-rapp-042a1037), or return to my [Github](https://github.com/trrapp12)*
-
-
-
