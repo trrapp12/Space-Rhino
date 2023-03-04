@@ -66,7 +66,13 @@ The original v1.0 was built on pure Vanilla JavaScript.  It demonstrated the fol
 
 This was a cool accomplishment for me to see an API bring back information for the first time.  It was pretty freakin' awesome!  But it was also a non-sensical display of JSON.  To get this into something that would work in an App I knew I would have to bring in React.  At that point in my studies I had no experience with it.  So by far the biggest obstacle was learning React.  
 
+Specific things I learned included: 
 
+- [x] Passing props from parent to child, parent to grandchild, and child to parent
+- [x] Using useEffect to create changes based off of state
+- [x] Combining ternary operators and props to render different possibilities based on props
+- [x] Setting up a favorites section that would save favorites after you closed required passing information stored in state and setting it in localStorage
+- [x] Setting up a way to share with friends using the Navigator API was fine enough until I wanted to pass a photo as well, which then required learning how to use a blob so I could pass a file, something I had never done before.
 
 ---
 
