@@ -1,6 +1,4 @@
-# Nasa-Photo-V2
-
-##### Contributors: Trevor Rapp
+# SPACE RHINO
 
 https://user-images.githubusercontent.com/11747875/220780742-72830504-a9ce-48e9-9ff5-cc54fcd88a2f.mp4
 
@@ -9,9 +7,6 @@ https://user-images.githubusercontent.com/11747875/220780742-72830504-a9ce-48e9-
 [![View Project](https://user-images.githubusercontent.com/11747875/141830030-bb37c7b2-7c74-43fa-b705-779189b9f380.png)](https://space-rhino.com)
 
 <br>
-
-##### Contributors: Trevor Rapp
-
 <br>
 
 ---
@@ -64,8 +59,14 @@ The original v1.0 was built on pure Vanilla JavaScript and demonstrated the foll
 
 ---
 
+### CREDITS: 
 
-### More Information:
+Contributors: Trevor Rapp
+
+<a href="https://www.flaticon.com/free-icons/react" title="react icons">React icons created by Freepik - Flaticon</a>
+---
+
+### YOU CAN FIND ME AT:
 
 \**For more information see my [LinkedIn](https://www.linkedin.com/in/trevor-rapp-042a1037), or return to my [Github](https://github.com/trrapp12)*
 
