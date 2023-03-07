@@ -183,11 +183,6 @@ p {
       color: white;
   }
 
-svg:focus, svg:hover {
-  fill: var(--gravity-4-hex);
-  transition-duration: 250ms;
-}
-
 /* =============================== HEADER SECTION  =============================== */
 
 .app--container {
@@ -226,26 +221,33 @@ svg:focus, svg:hover {
 }
 
 .drop-down {
+  background-color: #000000;
+  height: 100%;
+  bottom: 100%;
   left: 0;
-  height: 100vh;
   opacity: 1;
   padding: 2em;
-  position: sticky;
-  bottom: 0vh;
+  position: absolute;
+  top: 0;
   width: 100vw;
+  transform: translateY(-100%);
   z-index: 11;
 }
 
 .drop-down-active {
-  background-color: #010102;
+  background-color: #000000;
+  height: 100%;
+  bottom: 100%;
   left: 0;
   opacity: 1;
-  position: sticky;
-  top: 20vh;
+  display: inline-flex;
+  padding: 12% 10%;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  top: 0vh;
   width: 100vw;
   z-index: 11;
-  height: 100vh;
-  padding: 5em;
 }
 
 .drop-down-active > h1 {
@@ -397,7 +399,6 @@ svg:focus, svg:hover {
 /* =============================== MAIN SECTION  =============================== */
 
 .button-bookmark {
-  /* animation: pulse 10s ease infinite;     */
   background-color: #401b59;
   background-color: rgb(64 27 89 / 18%);
   border: 0 0 2px 2px;
@@ -407,11 +408,13 @@ svg:focus, svg:hover {
   border-right: 2px solid #683fbf;
   border-right: 2px solid var(--gravity-3-hex);
   bottom: 0;
-  height: 5rem;
-  position: absolute;
+  display: flex;
+  position: fixed;
+  height: 3.6rem;
   top: 20vh;
-  width: 6rem;
+  width: 4rem;
   z-index: 200;
+  justify-content: center;
 }
 
 .button-bookmark:hover, .button-bookmark:focus {
@@ -421,6 +424,7 @@ svg:focus, svg:hover {
 button > svg {
   fill: var(--gravity-4-rgba);
   transition-duration: 250ms;
+  max-height: 2rem;
 }
 
 button > svg:hover, 
@@ -573,6 +577,7 @@ button > svg:focus {
 }
 
 @media (max-width: 1450px) {
+
   .main--container-grid {
       display: grid;
       gap: 2rem;
@@ -732,6 +737,8 @@ button > svg:focus {
     font-size: .75rem;
   }
 }
+
+
 
 @keyframes pulse {
   0% {
