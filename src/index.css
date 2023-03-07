@@ -83,6 +83,7 @@
       margin: 0;
       padding: 0;
       scroll-behavior: smooth;
+      transition-duration: 250ms;
   }
 
 body {
@@ -342,9 +343,9 @@ p {
 }
 
 .triangle {
-  border-bottom: 12.1vw solid transparent;
+  border-bottom: 8.1vw solid transparent;
   border-left: 50vh solid #6b57f2;
-  border-left: 35vw solid var(--gravity-4-rgba);
+  border-left: 24vw solid var(--gravity-4-rgba);
   border-top: 10.1 solid transparent;
   position: absolute;
   max-width: 0;
@@ -641,6 +642,16 @@ button > svg:focus {
       transition: 500ms;
   }
 
+  .modal-image-container {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: 50vh;
+    max-width: 80ch;
+    overflow-y: scroll;
+    width: 100%;
+}
+
   .modal-image-container > img {
     max-width: 25vw;
     margin: 2em 0;
@@ -660,6 +671,11 @@ button > svg:focus {
   .modal-main--display-p-content {
     flex-shrink: 1;
   }
+
+  .modal-h1 {
+    font-size: 1.5em;
+    margin: 0 0 32px 0;
+}
 }
 
 @media (max-width: 500px) {
@@ -680,6 +696,28 @@ button > svg:focus {
 }
 
 @media (max-width: 425px) {
+
+  .button--container {
+    align-items: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    height: 100px;
+    justify-content: left;
+    left: 4px;
+    position: fixed;
+    top: calc(50vh - 100px);
+    width: auto;
+    z-index: 10;
+}
+
+  .main--container {
+    background-color: #010102;
+    padding: 2em 1em 2em 5em;
+    position: relative;
+    width: 100vw;
+}
+
   .main--display {
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
