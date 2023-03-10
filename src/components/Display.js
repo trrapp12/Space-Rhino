@@ -3,28 +3,53 @@ import Ape from '../components/images/DALL_E_ape_x_small.png'
 import Rhino from '../components/images/DALL_E_Rhino_640.png'
 
 export default function Display(props) {
-
+    
     const [clicked, setClick] = React.useState(false)
     const [clicked2, setClick2] = React.useState(false)    
     const [clicked3, setClick3] = React.useState(false)
-
+    
     let bookKey = localStorage.length | 0;
 
-    function clickHandler1(event) {
-        setFavorites();
-        setClick(!clicked)
+    const bookMarkTitle = props.title; 
+    const bookMarkURL = props.url;
+    // console.log(bookMarkTitle, bookMarkURL)
 
+    function clickHandler1(event) {
+        setClick(prevState => !prevState) 
+        checkFavorites();
+    }
+
+    function checkFavorites() {
+        const currentLocalData = [];
+
+        if (localStorage.length === 0) {
+            setFavorites();
+        } else {
+            for (let i = 0; i < localStorage.length; i++) {
+                console.log(currentLocalData)
+               currentLocalData.push(localStorage.getItem(localStorage.key(i)));
+               if (JSON.parse(currentLocalData[i].includes(bookMarkTitle)) && clicked) {
+                 removeFavorites()
+               } else if (JSON.parse(currentLocalData[i].includes(bookMarkTitle)) && !clicked) {
+                return
+               } else {
+                setFavorites();
+               }
+            }
+        }
+    }
+
+    function removeFavorites() {
+        console.log('firing remove favorites')
+        localStorage.removeItem(bookMarkTitle);
     }
 
     function setFavorites() {
-        const bookMarkTitle = props.title; 
-        const bookMarkURL = props.url;
         const bookMarkObj = JSON.stringify({
             title: bookMarkTitle,
             url: bookMarkURL
         })
-        localStorage.setItem(bookKey, bookMarkObj)
-        bookKey ++;
+        localStorage.setItem(bookMarkTitle, bookMarkObj)    
     }
     
     function clickHandler2(event) {
@@ -69,10 +94,10 @@ export default function Display(props) {
 
     return (
         <div className="main--display">
-            <h3>{props.title}</h3>
+            <h3>{bookMarkTitle}</h3>
             <p className="margin-2em-bottom"><span className="brown-highlight">Star Date {props.date}</span></p>  
             <div className="image-container">
-                {props.media_type === "image" ? <img className="margin-2em-bottom" src={props.url} alt={props.title}></img> : <img className="margin-2em-bottom" src={Ape} alt={props.title} style={{objectPosition: "center",
+                {props.media_type === "image" ? <img className="margin-2em-bottom" src={bookMarkURL} alt={bookMarkTitle}></img> : <img className="margin-2em-bottom" src={Ape} alt={bookMarkTitle} style={{objectPosition: "center",
                 objectFit: "cover" }}></img>}
             </div>
             <div className="main--display-p-content-container margin-2em-bottom">
