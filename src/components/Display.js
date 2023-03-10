@@ -4,18 +4,17 @@ import Rhino from '../components/images/DALL_E_Rhino_640.png'
 
 export default function Display(props) {
     
-    const [clicked, setClick] = React.useState(false)
+    // const [clicked, setClick] = React.useState(false)
     const [clicked2, setClick2] = React.useState(false)    
     const [clicked3, setClick3] = React.useState(false)
     
-    let bookKey = localStorage.length | 0;
-
     const bookMarkTitle = props.title; 
     const bookMarkURL = props.url;
     // console.log(bookMarkTitle, bookMarkURL)
 
     function clickHandler1(event) {
-        setClick(prevState => !prevState) 
+        console.log('props.setclick is ' + props.setClick)
+        props.setClick(prevState => !prevState) 
         checkFavorites();
     }
 
@@ -28,9 +27,9 @@ export default function Display(props) {
             for (let i = 0; i < localStorage.length; i++) {
                 console.log(currentLocalData)
                currentLocalData.push(localStorage.getItem(localStorage.key(i)));
-               if (JSON.parse(currentLocalData[i].includes(bookMarkTitle)) && clicked) {
+               if (JSON.parse(currentLocalData[i].includes(bookMarkTitle)) && props.clicked) {
                  removeFavorites()
-               } else if (JSON.parse(currentLocalData[i].includes(bookMarkTitle)) && !clicked) {
+               } else if (JSON.parse(currentLocalData[i].includes(bookMarkTitle)) && !props.clicked) {
                 return
                } else {
                 setFavorites();
@@ -53,13 +52,13 @@ export default function Display(props) {
     }
     
     function clickHandler2(event) {
-        setClick2(!clicked2)
+        setClick2(prevData => !prevData)
         props.open();
         props.update(props.el)
     }
 
     async function clickHandler3(event) {
-        setClick3(!clicked)
+        setClick3(!props.clicked)
 
         try {
 
@@ -104,7 +103,7 @@ export default function Display(props) {
                 <p className="main--display-p-content">{props.explanation}</p>
             </div>
             <div className="icon-holder">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 96 960 960" width="24" onClick={clickHandler1} className={clicked ? "clicked" : ""}>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 96 960 960" width="24" onClick={clickHandler1} className={props.clicked ? "clicked" : ""}>
                     <path d="m480 972-74-68Q296 803 226.5 732.5T117 608q-40-54-54.5-99.5T48 414q0-105 72-176.5T298 166q48 0 96 19.5t86 54.5q38-35 86-54.5t96-19.5q106 0 178 71.5T912 414q0 49-14.5 94.5T843 608q-40 54-109.5 124.5T554 904l-74 68Zm0-144q98-89 161-151.5t100-109q37-46.5 51-82t14-71.5q0-61-40.5-101.5T662 272q-45 0-86 27t-46 59H430q-5-32-46-59t-86-27q-63 0-103.5 40.5T154 414q0 36 14 71.5t51 82q37 46.5 100 109T480 828Zm0-278Z"/>
                 </svg>
                 <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 96 960 960" width="24" onClick={clickHandler2} className={clicked2 ? "clicked" : ""}>

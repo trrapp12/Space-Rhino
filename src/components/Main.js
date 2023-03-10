@@ -12,7 +12,9 @@ export default function Main() {
 
   const [modalItem, setModalItem] = React.useState(null);
 
-  console.log(showModal, modalItem)
+  const [clicked, setClick] = React.useState(false)
+
+  // console.log(showModal, modalItem)
 
   const api_key = process.env.REACT_APP_API_KEY;
 

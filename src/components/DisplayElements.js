@@ -1,7 +1,7 @@
 import React from 'react'
 import Display from './Display'
 
-export default function DisplayElements({nasaData, openModal, updateModalItem}) {
+export default function DisplayElements({nasaData, openModal, updateModalItem, clicked}) {
     
     return (
         <>
@@ -19,6 +19,7 @@ export default function DisplayElements({nasaData, openModal, updateModalItem}) 
             url={el.url}
             open={openModal}
             update={updateModalItem}
+            clicked={clicked}
             />
         )
         }
