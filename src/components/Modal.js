@@ -5,7 +5,7 @@ export default function Modal(props) {
 
     function clickOutCloseModal(event) {
         if (event.target.id === 'modal-main--display') {
-            props.closeFunc()
+            props.closeFunc();
         } else {
             console.log('clicking inside the modal')
         }
@@ -14,7 +14,7 @@ export default function Modal(props) {
     return (
     <div id="modal-main--display" className="modal-main--display" onClick={clickOutCloseModal}>
         <div className="modal-spacer">
-        <span onClick={props.closeFunc} className="material-symbols-outlined">Close</span>
+        <button name="close" id="close" onClick={props.closeFunc} className="material-symbols-outlined">close</button>
             <h1 className="modal-h1">{props.modalItem.title}</h1>
             <p className="margin-2em-bottom"><span className="modal-brown-highlight">Star Date {props.modalItem.date}</span></p>  
             <div className="modal-image-container">

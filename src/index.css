@@ -41,6 +41,7 @@
 }
 
 .material-symbols-outlined {
+  background-color: #401b5900;
   font-family: 'Material Symbols Outlined';
   font-weight: normal;
   font-style: normal;
@@ -99,6 +100,14 @@ body, html {
 svg {
   fill: white;
   cursor: pointer;
+  transition-duration: 80ms;
+}
+
+svg:hover, 
+svg:focus {
+  fill: var(--gravity-4-hex);
+  cursor: pointer;
+  transition-duration: 80ms;
 }
 
 /* =============================== ELEMENTS  =============================== */

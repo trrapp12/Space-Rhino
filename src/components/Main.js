@@ -12,8 +12,6 @@ export default function Main() {
 
   const [modalItem, setModalItem] = React.useState(null);
 
-  const [clicked, setClick] = React.useState(false)
-
   // console.log(showModal, modalItem)
 
   const api_key = process.env.REACT_APP_API_KEY;
@@ -106,8 +104,7 @@ export default function Main() {
     <div className="main--container">
       {showModal && modalItem && <Modal
         modalItem = {modalItem}
-        closeFunc = {closeModal}
-        
+        closeFunc = {closeModal}    
       />}
       <div className="main--container-grid">
         <DisplayElements 
