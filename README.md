@@ -80,6 +80,8 @@ Specific things I learned included:
 
 Contributors: Trevor Rapp
 
+*This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).*
+
 ---
 
 ### YOU CAN FIND ME AT:
