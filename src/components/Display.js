@@ -84,8 +84,8 @@ export default function Display(props) {
             console.log("Shared successfully");
 
         } catch (error) {
-
-            console.error("Error sharing: ", error)
+            console.error("Error sharing: ", error);
+            alert(`The following error occurred: ${error}. This may be because your browser does not currently support the web-share API.  Please check this first.  If that does not resolve the issue please leave a comment at https://github.com/trrapp12/Nasa-Photo-V2/discussions/29 `)
         }
 
     }
