@@ -10,7 +10,6 @@ export default function Display(props) {
 
     const bookMarkTitle = props.title; 
     const bookMarkURL = props.url;
-    // console.log(bookMarkTitle, bookMarkURL)
 
     function clickHandler1(event) {
         setClick(prevState => !prevState) 
