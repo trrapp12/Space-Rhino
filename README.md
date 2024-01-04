@@ -32,7 +32,7 @@ https://user-images.githubusercontent.com/11747875/220780742-72830504-a9ce-48e9-
 > “He insisted that stars were people so well loved, they were traced in constellations, to live forever”
 > ― Jodi Picoult, My Sister's Keeper
 
-*8I have always loved astronomy.  One of the most transformative moments I had was as a young scout paddling on the waters of Lee Lakes near the Grand Tetons on a night devoid of any human source of light.  Above me was a skyscape of stars so impressive and immediate that if I stood up in my canoe I would have surely hit my head on the milky way.*
+*I have always loved astronomy.  One of the most transformative moments I had was as a young scout paddling on the waters of Lee Lakes near the Grand Tetons on a night devoid of any human source of light.  Above me was a skyscape of stars so impressive and immediate that if I stood up in my canoe I would have surely hit my head on the milky way.*
 
 *So when I came to a point in my learning that I needed to learn how to connect to an API, I knew I wanted to connect to NASAs.  With hard work and many, many iterations, I now have a project that can take my love of astronomy and hopefully use it to inspire other people.*  
 
