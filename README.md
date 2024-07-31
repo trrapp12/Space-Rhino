@@ -6,7 +6,6 @@
 
 _All work, from ideation to conception, is completely my own._
 
-new info
 
 ---
 
